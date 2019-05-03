@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate-react-app",
+  "name": "cars-showcase",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
+  "author": "Mariano Casteller",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",
