@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ExpenseForm from './ExpenseForm';
-import { startEditExpense, startRemoveExpense } from '../actions/expenses';
+import VehicleForm from './VehicleForm';
+import { startEditVehicle, startRemoveVehicle } from '../actions/vehicles';
 
 export class EditVehiclePage extends React.Component {
-  onSubmit = (expense) => {
-    // this.props.startEditExpense(this.props.expense.id, expense);
-    // this.props.history.push('/');
+  onSubmit = (vehicle) => {
+    this.props.startEditVehicle(this.props.vehicle.id, vehicle);
+    this.props.history.push('/');
   };
   onRemove = () => {
-    // this.props.startRemoveExpense({ id: this.props.expense.id });
-    // this.props.history.push('/');
+    this.props.startRemoveVehicle({ id: this.props.vehicle.id });
+    this.props.history.push('/');
   };
   render() {
     return (
@@ -33,7 +33,7 @@ export class EditVehiclePage extends React.Component {
 };
 
 const mapStateToProps = (state, props) => ({
-  vehicle: state.vehicles.find((vehicle) => vehicle.id === props.match.params.id)
+  vehicle: state.vehicles.find((vehicle) => vehicle.id === props.match.params.vehicleId)
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

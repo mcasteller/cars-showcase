@@ -10,6 +10,8 @@ import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import VehicleCategory from '../components/VehicleCategory';
 import VehicleDetail from '../components/VehicleDetail';
+import AddVehiclePage from '../components/AddVehiclePage';
+import EditVehiclePage from '../components/EditVehiclePage';
 
 export const history = createHistory();
 
@@ -40,18 +42,11 @@ const AppRouter = () => {
       <div>
         <Switch>
           {/* <PublicRoute path="/" component={LoginPage} exact={true} /> */}
-          {/* <PrivateRoute path="/dashboard" component={DashboardPage} /> */}
-          {/* {categories.map(({ id }) => {
-            return (
-              <Switch>
-                <PublicRoute key={`/${id}/:vehicleID`} path={`/${id}/:vehicleID`} component={VehicleDetail} />
-                <PublicRoute key={id} path={`/${id}`} component={VehicleCategory}/>
-              </Switch>  
-            )
-          })} */}
+          <PublicRoute path="/" component={HomePage} exact />
+          <PublicRoute path="/create" component={AddVehiclePage}/>
+          <PublicRoute path="/edit/:vehicleId" component={EditVehiclePage}/>
           <PublicRoute path="/:categoryId/:vehicleId" component={VehicleDetail}/>
           <PublicRoute path="/:cateroryId" component={VehicleCategory}/>
-          <PublicRoute path="/" component={HomePage} exact />
           <Route component={NotFoundPage} />
         </Switch>
       </div>

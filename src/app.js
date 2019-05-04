@@ -10,7 +10,11 @@ import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
+// Create Redux store
 const store = configureStore();
+
+// We use Provider tag as part of react-redux plugin to manage redux state
+// It provides the store to every react element our application uses
 const jsx = (
   <Provider store={store}>
     <AppRouter />
