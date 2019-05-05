@@ -1,12 +1,12 @@
-# Expensify app
+# Cars Showcase web app
 
-Expenses CRUD web application. 
+CRUD web application. 
 
 Technologies
 
--  ReactJS using Redux to manage component state
+-  ReactJS + Redux to manage component state
 -  Firebase database
--  Webpack as local server (Heroku as remote server)
+-  Webpack as local development server (Heroku as production server)
 -  styles are delivered through SASS 
 -  test cases provided by Jest test tool.
 
@@ -47,8 +47,6 @@ yarn run dev-server
 
 - Jest testing - it gets installed on package.json under script category. (yarn test or yarn test -- --watch to watch for changes)
 
-*This project is part of Udemy React training course provided by Andrew Mead.* 
-
 ## Project Structure:
 
 - /public folder: where resources to be served live
@@ -64,7 +62,7 @@ yarn run dev-server
   - src/playground: JS6, redux and others code samples
   - src/reducers: redux reducers
   - src/routers: react routers definitions
-  - src/selectors: expense list selectors
+  - src/selectors: vehicle list selectors
   - src/store: redux store definition
   - src/styles: SASS styles
   - src/tests: Jest test cases
