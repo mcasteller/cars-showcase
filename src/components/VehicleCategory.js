@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import VehicleCategoryItem from './VehicleCategoryItem';
 //import selectVehicles from '../selectors/vehicles';
 
+// This component is used on both vehicle list view and vehicle list
+// edit mode
 export const VehicleCategory = (props) => (
   <div className="content-container">
     <div className="list-header">

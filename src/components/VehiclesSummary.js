@@ -36,12 +36,7 @@ export const VehiclesSummary = () => {
     <div className="page-header">
       <div className="content-container">
         {/* <h1 className="page-header__title">Viewing <span>{vehicleCount}</span> {vehicleWord} totalling <span>{formattedExpensesTotal}</span></h1> */}
-        <Link to="/create">
-          <h2>Agregar Vehiculos</h2>
-        </Link>
-        <Link to="/edit">
-          <h2>Editar Vehiculos</h2>
-        </Link>
+        
         <h1 className="page-header__title">Vehiculos en Venta</h1>
         <div>
           {

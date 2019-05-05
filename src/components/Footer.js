@@ -5,8 +5,9 @@ const Footer = () => (
   <footer className="footer">
     <div className="content-container">
       <div className="footer__content">
-        <Link className="footer__title" to="/dashboard">
-          <h1>Pie de Pagina</h1>
+        <h1>Pie de Pagina</h1>
+        <Link className="footer__title" to="/login">
+          <h1>Login</h1>
         </Link>
       </div>
     </div>

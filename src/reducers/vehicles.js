@@ -23,6 +23,8 @@ export default (state = vehiclesReducerDefaultState, action) => {
           return vehicle;
         };
       });
+    case 'SET_VEHICLES':
+      return action.vehicles;
     default:
       return state;
   }

@@ -12,6 +12,7 @@ import VehicleCategory from '../components/VehicleCategory';
 import VehicleDetail from '../components/VehicleDetail';
 import AddVehiclePage from '../components/AddVehiclePage';
 import EditVehiclePage from '../components/EditVehiclePage';
+import AdminPage from '../components/AdminPage';
 
 export const history = createHistory();
 
@@ -41,10 +42,12 @@ const AppRouter = () => {
     <Router history={history}>
       <div>
         <Switch>
-          {/* <PublicRoute path="/" component={LoginPage} exact={true} /> */}
           <PublicRoute path="/" component={HomePage} exact />
-          <PublicRoute path="/create" component={AddVehiclePage}/>
-          <PublicRoute path="/edit/:vehicleId" component={EditVehiclePage}/>
+          <PublicRoute path="/login" component={LoginPage} />
+          <PublicRoute path="/admin/edit/:vehicleId" component={EditVehiclePage}/>
+          <PublicRoute path="/admin/edit" component={VehicleCategory}/>
+          <PublicRoute path="/admin/create" component={AddVehiclePage}/>
+          <PublicRoute path="/admin" component={AdminPage}/>
           <PublicRoute path="/:categoryId/:vehicleId" component={VehicleDetail}/>
           <PublicRoute path="/:cateroryId" component={VehicleCategory}/>
           <Route component={NotFoundPage} />
