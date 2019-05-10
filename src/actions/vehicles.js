@@ -10,7 +10,8 @@ export const addVehicle = (vehicle) => ({
 
 export const startAddVehicle = (vehicleData = {}) => {
   return (dispatch, getState) => {
-    const {  
+    const {
+      title = '',  
       description = '',
       note = '',
       amount = 0,
@@ -20,7 +21,7 @@ export const startAddVehicle = (vehicleData = {}) => {
 
     saveFiles(vehicleData.filesURL).then((filesURL) => {
    
-      const vehicle = { description, note, amount, createdAt, filesURL };
+      const vehicle = { title, description, note, amount, createdAt, filesURL };
 
       database.ref(`vehicles`).push(vehicle).then((ref) => {
         dispatch(addVehicle({

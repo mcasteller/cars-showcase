@@ -10,6 +10,7 @@ export class VehicleDetailPage extends React.Component {
 	    super(props);
 
 		this.state = {
+			title: props.vehicle ? props.vehicle.title : '',
 			description: props.vehicle ? props.vehicle.description : '',
 	      	createdAt: props.vehicle ? moment(props.vehicle.createdAt) : moment(),
 			filesURL: props.vehicle ? props.vehicle.filesURL : []
@@ -22,7 +23,8 @@ export class VehicleDetailPage extends React.Component {
 		      <SimpleSlider 
 		      	items={this.state.filesURL}
 		      	/>
-		      <h3 className="list-item__title">{this.state.description} Detalle Vehiculo</h3>
+		      <h3 className="list-item__title">{this.state.title}</h3>
+		      <p className="list-item__title">{this.state.description}</p>
 		      <span className="list-item__sub-title">{moment(this.state.createdAt).format('MMMM Do, YYYY')}</span>
 		    </div>
 		)	

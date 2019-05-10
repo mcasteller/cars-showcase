@@ -2,16 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import numeral from 'numeral';
+import { Media } from 'react-bootstrap';
 
-const VehicleCategoryItem = ({ id, description, amount, createdAt, filesURL }) => (
-  <div>
-      <img src={filesURL[0]} style={{width:130 + 'px'}}></img>
-      <div>
-        <h3 className="list-item__title">{description}</h3>
-        <span className="list-item__sub-title">{moment(createdAt).format('MMMM Do, YYYY')}</span>
-      </div>
-      <h3 className="list-item__data">{numeral(amount / 100).format('$0,0.00')}</h3>
-  </div>
+const VehicleCategoryItem = ({ id, title, description, amount, createdAt, note, filesURL }) => (
+	<Media>
+	  <img
+	    width={50 + '%'}
+	    className="mr-3"
+	    src={filesURL[0]}
+	    alt="Generic placeholder"
+	  />
+	  <Media.Body>
+	    <h5>{title}</h5>
+	    <p>{note}</p>
+	  </Media.Body>
+	</Media>
 );
 
 export default VehicleCategoryItem;

@@ -8,6 +8,7 @@ export default class VehicleForm extends React.Component {
     super(props);
 
     this.state = {
+      title: props.vehicle ? props.vehicle.title : '', 
       description: props.vehicle ? props.vehicle.description : '',
       note: props.vehicle ? props.vehicle.note : '',
       amount: props.vehicle ? (props.vehicle.amount / 100).toString() : '',
@@ -18,6 +19,11 @@ export default class VehicleForm extends React.Component {
     };
   }
   
+  onTitleChange = (e) => {
+    const title = e.target.value;
+    this.setState(() => ({ title }));
+  };
+
   onDescriptionChange = (e) => {
     const description = e.target.value;
     this.setState(() => ({ description }));
@@ -58,6 +64,7 @@ export default class VehicleForm extends React.Component {
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
+        title: this.state.title,
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
@@ -75,16 +82,23 @@ export default class VehicleForm extends React.Component {
           onChange={this.onFilesChange} 
         />
         <input
-          type="text"
-          placeholder="Description"
+          type="textarea"
+          placeholder="Titulo"
           autoFocus
           className="text-input"
+          value={this.state.title || ''}
+          onChange={this.onTitleChange}
+        />
+        <textarea
+          placeholder="Agregar Descripcion Vehiculo"
+          className="textarea"
           value={this.state.description}
           onChange={this.onDescriptionChange}
-        />
+        >
+        </textarea>
         <input
           type="text"
-          placeholder="Amount"
+          placeholder="Valor"
           className="text-input"
           value={this.state.amount}
           onChange={this.onAmountChange}
@@ -98,7 +112,7 @@ export default class VehicleForm extends React.Component {
           isOutsideRange={() => false}
         />
         <textarea
-          placeholder="Add a note for your vehicle (optional)"
+          placeholder="Notas adicionales (opcional)"
           className="textarea"
           value={this.state.note}
           onChange={this.onNoteChange}
