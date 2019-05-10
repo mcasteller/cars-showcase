@@ -9,7 +9,7 @@ import LoginPage from '../components/LoginPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import VehicleCategory from '../components/VehicleCategory';
-import VehicleDetail from '../components/VehicleDetail';
+import VehicleDetailPage from '../components/VehicleDetailPage';
 import AddVehiclePage from '../components/AddVehiclePage';
 import EditVehiclePage from '../components/EditVehiclePage';
 import AdminPage from '../components/AdminPage';
@@ -48,7 +48,7 @@ const AppRouter = () => {
           <PublicRoute path="/admin/edit" component={VehicleCategory}/>
           <PublicRoute path="/admin/create" component={AddVehiclePage}/>
           <PublicRoute path="/admin" component={AdminPage}/>
-          <PublicRoute path="/:categoryId/:vehicleId" component={VehicleDetail}/>
+          <PublicRoute path="/:categoryId/:vehicleId" component={VehicleDetailPage}/>
           <PublicRoute path="/:cateroryId" component={VehicleCategory}/>
           <Route component={NotFoundPage} />
         </Switch>

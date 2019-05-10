@@ -1,4 +1,4 @@
-import database from '../firebase/firebase';
+import { database, storage } from '../firebase/firebase';
 
 // Actions allow us to change the redux store
 
@@ -14,18 +14,40 @@ export const startAddVehicle = (vehicleData = {}) => {
       description = '',
       note = '',
       amount = 0,
-      createdAt = 0
+      createdAt = 0,
+      filesURL = []
     } = vehicleData;
-    const vehicle = { description, note, amount, createdAt };
 
-    return database.ref(`vehicles`).push(vehicle).then((ref) => {
-      dispatch(addVehicle({
-        id: ref.key,
-        ...vehicle
-      }));
-    })
+    saveFiles(vehicleData.filesURL).then((filesURL) => {
+   
+      const vehicle = { description, note, amount, createdAt, filesURL };
+
+      database.ref(`vehicles`).push(vehicle).then((ref) => {
+        dispatch(addVehicle({
+          id: ref.key,
+          ...vehicle
+        }));
+      })
+    });
   };
 };
+
+const saveFiles = async (files) => {
+    return await Promise.all(files.map(file => saveFile(file)))
+}
+
+const saveFile = async (file) => {
+  return await storeFile(file)
+}
+
+const storeFile = (file) => {
+  let ref = storage.ref().child(`images/${file.name}`);
+  return ref.put(file.src).then((snapshot) => {
+            console.log('Uploaded a blob or file!');
+
+            return snapshot.downloadURL;
+        });
+}
 
 // REMOVE_VEHICLE
 export const removeVehicle = ({ id } = {}) => ({

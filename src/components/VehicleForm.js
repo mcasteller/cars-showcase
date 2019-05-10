@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
+import FileSelect from './FileSelect';
 
 export default class VehicleForm extends React.Component {
   constructor(props) {
@@ -12,17 +13,21 @@ export default class VehicleForm extends React.Component {
       amount: props.vehicle ? (props.vehicle.amount / 100).toString() : '',
       createdAt: props.vehicle ? moment(props.vehicle.createdAt) : moment(),
       calendarFocused: false,
+      filesURL: props.vehicle ? props.vehicle.filesURL : '',
       error: ''
     };
   }
+  
   onDescriptionChange = (e) => {
     const description = e.target.value;
     this.setState(() => ({ description }));
   };
+  
   onNoteChange = (e) => {
     const note = e.target.value;
     this.setState(() => ({ note }));
   };
+  
   onAmountChange = (e) => {
     const amount = e.target.value;
 
@@ -30,14 +35,21 @@ export default class VehicleForm extends React.Component {
       this.setState(() => ({ amount }));
     }
   };
+  
   onDateChange = (createdAt) => {
     if (createdAt) {
       this.setState(() => ({ createdAt }));
     }
   };
+  
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
   };
+  
+  onFilesChange = (filesURL) => {
+    this.setState(() => filesURL);
+  }
+
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -49,7 +61,8 @@ export default class VehicleForm extends React.Component {
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
-        note: this.state.note
+        note: this.state.note,
+        filesURL: this.state.filesURL
       });
     }
   };
@@ -57,6 +70,10 @@ export default class VehicleForm extends React.Component {
     return (
       <form className="form" onSubmit={this.onSubmit}>
         {this.state.error && <p className="form__error">{this.state.error}</p>}
+        <FileSelect 
+          filesURL={this.state.filesURL}
+          onChange={this.onFilesChange} 
+        />
         <input
           type="text"
           placeholder="Description"

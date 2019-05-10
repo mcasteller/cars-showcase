@@ -13,11 +13,7 @@ export const VehicleCategory = (props) => (
       <div className="show-for-desktop">Vehiculos</div>
       <div className="show-for-desktop">Amount</div>
     </div>
-    {/* <Link to={`${match.url}/25`}>
-      <VehicleCategoryItem key={12} description='hola che' />;
-    </Link> */}
-
-
+   
     <div className="list-body">
       {
         props.vehicles.length === 0 ? (
@@ -30,10 +26,7 @@ export const VehicleCategory = (props) => (
                   <VehicleCategoryItem {...vehicle} />;
                 </Link>
             ))
-            // {
-            //   return <VehicleCategoryItem key={vehicle.id} {...vehicle} />;
-            // })
-          )
+        )
       }
     </div>
   </div>

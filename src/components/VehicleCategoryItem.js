@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import numeral from 'numeral';
-import VehicleDetail from './VehicleDetail'; 
 
 const VehicleCategoryItem = ({ id, description, amount, createdAt }) => (
   <div>
