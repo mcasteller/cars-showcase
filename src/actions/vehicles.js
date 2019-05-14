@@ -11,17 +11,21 @@ export const addVehicle = (vehicle) => ({
 export const startAddVehicle = (vehicleData = {}) => {
   return (dispatch, getState) => {
     const {
-      title = '',  
+      brand = '',  
+      trim = '',  
+      amount = 0,  
+      year = 0,  
+      engine = '',  
+      kilometers = '',  
+      color = '',  
       description = '',
-      note = '',
-      amount = 0,
-      createdAt = 0,
+      shortDescription = '',
       filesURL = []
     } = vehicleData;
 
     saveFiles(vehicleData.filesURL).then((filesURL) => {
    
-      const vehicle = { title, description, note, amount, createdAt, filesURL };
+      const vehicle = { brand, trim, amount, year, engine, kilometers, color, description, shortDescription, filesURL };
 
       database.ref(`vehicles`).push(vehicle).then((ref) => {
         dispatch(addVehicle({

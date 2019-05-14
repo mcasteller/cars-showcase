@@ -1,19 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import VehicleCategoryItem from './VehicleCategoryItem';
-//import selectVehicles from '../selectors/vehicles';
+import VehicleListItem from './VehicleListItem';
+import selectVehicles from '../selectors/vehicles';
 
 // This component is used on both vehicle list view and vehicle list
 // edit mode
-export const VehicleCategory = (props) => (
+export const VehicleList = (props) => (
   <div className="content-container">
-    <div className="list-header">
-      <div className="show-for-mobile">Vehiculos</div>
-      <div className="show-for-desktop">Vehiculos</div>
-      <div className="show-for-desktop">Amount</div>
-    </div>
-   
     <div className="list-body">
       {
         props.vehicles.length === 0 ? (
@@ -22,8 +16,8 @@ export const VehicleCategory = (props) => (
           </div>
         ) : (
             props.vehicles.map((vehicle) => (
-                <Link key={vehicle.id} to={`${props.match.url}/${vehicle.id}`}>
-                  <VehicleCategoryItem {...vehicle} />;
+                <Link key={vehicle.id} to={props.match ? `${props.match.url}/${vehicle.id}` : `vehiculos/${vehicle.id}`}>
+                  <VehicleListItem {...vehicle} />;
                 </Link>
             ))
         )
@@ -36,9 +30,9 @@ export const VehicleCategory = (props) => (
 // Maps store state into component props
 const mapStateToProps = (state) => {
   return {
-    // vehicles: selectVehicles(state.vehicles, state.filters)
-    vehicles: state.vehicles
+    vehicles: selectVehicles(state.vehicles, state.filters)
+    //vehicles: state.vehicles
   };
 };
 
-export default connect(mapStateToProps)(VehicleCategory);
+export default connect(mapStateToProps)(VehicleList);

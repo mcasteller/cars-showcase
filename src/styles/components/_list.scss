@@ -1,14 +1,30 @@
 .list-header {
   background: $off-white;
-  border: 1px solid darken($off-white, 7%);
-  color: $grey;
-  display: flex;
-  justify-content: space-between;
   padding: $s-size $m-size;
 }
 
 .list-body {
   margin-bottom: $m-size;
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  .media-body {
+    padding: 20px 5vw;
+    text-align: left;
+
+    span {
+      color: $grey;
+      font-size: medium;
+    }
+  }
+
   @media (min-width: $desktop-breakpoint) {
     margin-bottom: $l-size;
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { SingleDatePicker } from 'react-dates';
+import ReactQuill from 'react-quill';
 import FileSelect from './FileSelect';
 
 export default class VehicleForm extends React.Component {
@@ -8,32 +8,31 @@ export default class VehicleForm extends React.Component {
     super(props);
 
     this.state = {
-      title: props.vehicle ? props.vehicle.title : '', 
-      description: props.vehicle ? props.vehicle.description : '',
-      note: props.vehicle ? props.vehicle.note : '',
+      brand: props.vehicle ? props.vehicle.brand : '', 
+      trim: props.vehicle ? props.vehicle.trim : '', 
       amount: props.vehicle ? (props.vehicle.amount / 100).toString() : '',
-      createdAt: props.vehicle ? moment(props.vehicle.createdAt) : moment(),
+      year: props.vehicle ? (props.vehicle.year).toString() : '',
+      engine: props.vehicle ? props.vehicle.engine : '', 
+      kilometers: props.vehicle ? (props.vehicle.kilometers).toString() : '',
+      color: props.vehicle ? props.vehicle.color : '', 
+      description: props.vehicle ? props.vehicle.description : '',
+      shortDescription: props.vehicle ? props.vehicle.shortDescription : '',
       calendarFocused: false,
       filesURL: props.vehicle ? props.vehicle.filesURL : '',
       error: ''
     };
   }
   
-  onTitleChange = (e) => {
-    const title = e.target.value;
-    this.setState(() => ({ title }));
+  onBrandChange = (e) => {
+    const brand = e.target.value;
+    this.setState(() => ({ brand }));
   };
 
-  onDescriptionChange = (e) => {
-    const description = e.target.value;
-    this.setState(() => ({ description }));
+  onTrimChange = (e) => {
+    const trim = e.target.value;
+    this.setState(() => ({ trim }));
   };
-  
-  onNoteChange = (e) => {
-    const note = e.target.value;
-    this.setState(() => ({ note }));
-  };
-  
+
   onAmountChange = (e) => {
     const amount = e.target.value;
 
@@ -41,17 +40,43 @@ export default class VehicleForm extends React.Component {
       this.setState(() => ({ amount }));
     }
   };
-  
-  onDateChange = (createdAt) => {
-    if (createdAt) {
-      this.setState(() => ({ createdAt }));
+
+  onYearChange = (e) => {
+    const year = e.target.value;
+
+    if (!year || year.match(/^\d{1,}(\.\d{0,2})?$/)) {
+      this.setState(() => ({ year }));
     }
   };
-  
-  onFocusChange = ({ focused }) => {
-    this.setState(() => ({ calendarFocused: focused }));
+
+  onEngineChange = (e) => {
+    const engine = e.target.value;
+    this.setState(() => ({ engine }));
+  };
+
+  onKilometersChange = (e) => {
+     const kilometers = e.target.value;
+
+    if (!kilometers || kilometers.match(/^\d{1,}(\.\d{0,2})?$/)) {
+      this.setState(() => ({ kilometers }));
+    }
+ };
+
+  onColorChange = (e) => {
+    const color = e.target.value;
+    this.setState(() => ({ color }));
+  };
+
+  onDescriptionChange = (value) => {
+    const description = value;
+    this.setState(() => ({ description }));
   };
   
+  onShortDescriptionChange = (value) => {
+    const shortDescription = value;
+    this.setState(() => ({ shortDescription }));
+  };
+      
   onFilesChange = (filesURL) => {
     this.setState(() => filesURL);
   }
@@ -64,11 +89,15 @@ export default class VehicleForm extends React.Component {
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
-        title: this.state.title,
-        description: this.state.description,
+        brand: this.state.brand,
+        trim: this.state.trim,
         amount: parseFloat(this.state.amount, 10) * 100,
-        createdAt: this.state.createdAt.valueOf(),
-        note: this.state.note,
+        year: parseInt(this.state.year, 10),
+        engine: this.state.engine,
+        kilometers: parseFloat(this.state.kilometers, 10) * 100,
+        color: this.state.color,
+        description: this.state.description,
+        shortDescription: this.state.shortDescription,
         filesURL: this.state.filesURL
       });
     }
@@ -83,19 +112,27 @@ export default class VehicleForm extends React.Component {
         />
         <input
           type="textarea"
-          placeholder="Titulo"
+          placeholder="Marca"
           autoFocus
           className="text-input"
-          value={this.state.title || ''}
-          onChange={this.onTitleChange}
+          value={this.state.brand || ''}
+          onChange={this.onBrandChange}
         />
-        <textarea
-          placeholder="Agregar Descripcion Vehiculo"
-          className="textarea"
-          value={this.state.description}
-          onChange={this.onDescriptionChange}
-        >
-        </textarea>
+        <input
+          type="textarea"
+          placeholder="Modelo"
+          autoFocus
+          className="text-input"
+          value={this.state.trim || ''}
+          onChange={this.onTrimChange}
+        />
+        <input
+          type="text"
+          placeholder="Año"
+          className="text-input"
+          value={this.state.year}
+          onChange={this.onYearChange}
+        />
         <input
           type="text"
           placeholder="Valor"
@@ -103,21 +140,37 @@ export default class VehicleForm extends React.Component {
           value={this.state.amount}
           onChange={this.onAmountChange}
         />
-        <SingleDatePicker
-          date={this.state.createdAt}
-          onDateChange={this.onDateChange}
-          focused={this.state.calendarFocused}
-          onFocusChange={this.onFocusChange}
-          numberOfMonths={1}
-          isOutsideRange={() => false}
+        <input
+          type="text"
+          placeholder="Motor"
+          className="text-input"
+          value={this.state.engine}
+          onChange={this.onEngineChange}
         />
-        <textarea
-          placeholder="Notas adicionales (opcional)"
-          className="textarea"
-          value={this.state.note}
-          onChange={this.onNoteChange}
-        >
-        </textarea>
+        <input
+          type="text"
+          placeholder="Kilometros"
+          className="text-input"
+          value={this.state.kilometers}
+          onChange={this.onKilometersChange}
+        />
+        <input
+          type="text"
+          placeholder="Color"
+          className="text-input"
+          value={this.state.color}
+          onChange={this.onColorChange}
+        />
+        <ReactQuill 
+          placeholder="Agregar Descripcion Vehiculo"
+          value={this.state.description}    
+          onChange={this.onDescriptionChange} 
+        />
+        <ReactQuill
+          placeholder="Descripcion breve (aparece en el listado de vehiculos)"
+          value={this.state.shortDescription}
+          onChange={this.onShortDescriptionChange}
+        />
         <div>
           <button className="button">Guardar Vehiculo</button>
         </div>

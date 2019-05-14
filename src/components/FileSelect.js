@@ -13,15 +13,6 @@ class FileSelect extends React.Component {
    
     };
 
-    // onChange = (e) => {
-    //     const fileElem = document.getElementById("fileElem");
-
-    //     if (fileElem) {
-    //         fileElem.click();
-    //     }
-    //     e.preventDefault(); // prevent navigation to "#"
-    // };
-    
     componentDidMount() {
       // Typical usage (don't forget to compare props):
       if (this.props.filesURL) {
@@ -60,8 +51,7 @@ class FileSelect extends React.Component {
                 info.innerHTML = files[i].name + ": " + files[i].size + " bytes";
                 li.appendChild(info);
             }
-            // call external function
-        }    //this.props.onChange({ filesURL })
+        }
       }
     }
 
@@ -109,11 +99,10 @@ class FileSelect extends React.Component {
 
         return (
             <div>
-              <input type="file" id="fileElem" multiple accept="image/*"  onChange={this.onChange}/>
-                <a href="#" id="fileSelect" onClick={this.onFileChange}>Select some files</a> 
-                <div id="fileList">
-                    <p>No files selected!</p>
-                </div>
+              <input type="file" id="fileElem" multiple accept="image/*" onChange={this.onChange}/>
+              <div id="fileList">
+                <p>No files selected!</p>
+              </div>
             </div>
         )
     }

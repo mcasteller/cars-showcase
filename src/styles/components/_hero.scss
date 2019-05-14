@@ -1,0 +1,18 @@
+.hero {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero__image {
+  width: 100vw;
+  max-width: 90vw;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero__copy__wrapper {
+	position: absolute;
+    top: 90px;
+    left: 7vw;
+    font-size: large;
+}
