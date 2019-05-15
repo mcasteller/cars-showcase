@@ -1,0 +1,16 @@
+.slick-slider {
+    margin-bottom: 5rem;
+
+	img {
+		width: 100%;
+	}	
+
+	.slick-dots li button:before {
+		font-size : 1rem;
+	}
+
+	.slick-next:before, 
+	.slick-prev:before {
+		color: black;
+	}
+}
