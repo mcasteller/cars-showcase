@@ -107,6 +107,7 @@ export default class VehicleForm extends React.Component {
     return (
       <form className="form" onSubmit={this.onSubmit}>
         {this.state.error && <p className="form__error">{this.state.error}</p>}
+        <h3>{strings.site.fileRatioWarning}</h3>
         <FileSelect 
           filesURL={this.state.filesURL}
           onChange={this.onFilesChange} 

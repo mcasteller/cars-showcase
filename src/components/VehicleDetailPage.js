@@ -28,9 +28,9 @@ export class VehicleDetailPage extends React.Component {
 
 	render() {
 		return (
-		    <div>
-		      <SimpleSlider 
-		      	items={this.state.filesURL}
+		    <div className="content-container">
+		      <SimpleSlider
+		      	items={this.state.filesURL || [] }
 		      	/>
 	          <h3><span>{strings.site.vehicle.brand}: </span>{this.state.brand}</h3>
 	   	      <h3><span>{strings.site.vehicle.trim}: </span>{this.state.trim}</h3>
@@ -38,7 +38,7 @@ export class VehicleDetailPage extends React.Component {
 		   	  <h3><span>{strings.site.vehicle.engine}: </span>{this.state.engine}</h3>
 		      <h3><span>{strings.site.vehicle.kilometers}: </span>{this.state.kilometers}</h3>
 	   	      <h3><span>{strings.site.vehicle.color}: </span>{this.state.color}</h3>
-		      {ReactHtmlParser(this.state.description)}
+		      <span className="vehicle-description">{ReactHtmlParser(this.state.description)}</span>
 		    </div>
 		)	
 	}

@@ -15,7 +15,7 @@ class SimpleSlider extends React.Component {
         {this.props.items.map((fileURL) => {
           return (
             <div key={this.props.items.indexOf(fileURL)}>
-              <img src={fileURL} style={{width:130 + 'px'}}></img>
+              <img src={fileURL}></img>
             </div>
           ) 
         })}
