@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
+import strings from '../resources/strings';
 
 export class VehicleListFilters extends React.Component {
   state = {
@@ -30,8 +31,8 @@ export class VehicleListFilters extends React.Component {
           <div className="input-group__item">
             <input
               type="text"
-              className="text-input"
-              placeholder="Buscar"
+              className="text-input search"
+              placeholder={strings.site.search}
               value={this.props.filters.text}
               onChange={this.onTextChange}
             />
@@ -42,8 +43,8 @@ export class VehicleListFilters extends React.Component {
               value={this.props.filters.sortBy}
               onChange={this.onSortChange}
             >
-              <option value="date">Date</option>
-              <option value="amount">Amount</option>
+              <option value="date">{strings.site.vehicle.year}</option>
+              <option value="amount">{strings.site.vehicle.amount}</option>
             </select>
           </div>
         </div>

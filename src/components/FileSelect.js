@@ -1,4 +1,5 @@
 import React from 'react';
+import strings from '../resources/strings';
 
 //window.URL = window.URL || window.webkitURL;
 
@@ -101,7 +102,7 @@ class FileSelect extends React.Component {
             <div>
               <input type="file" id="fileElem" multiple accept="image/*" onChange={this.onChange}/>
               <div id="fileList">
-                <p>No files selected!</p>
+                <p>{strings.site.noFilesSelected}</p>
               </div>
             </div>
         )

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import VehicleListItem from './VehicleListItem';
 import selectVehicles from '../selectors/vehicles';
+import strings from '../resources/strings';
 
 // This component is used on both vehicle list view and vehicle list
 // edit mode
@@ -12,7 +13,7 @@ export const VehicleList = (props) => (
       {
         props.vehicles.length === 0 ? (
           <div className="list-item list-item--message">
-            <span>No hay vehiculos</span>
+            <span>{strings.site.noVehicles}</span>
           </div>
         ) : (
             props.vehicles.map((vehicle) => (

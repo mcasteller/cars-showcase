@@ -14,15 +14,31 @@ body {
 }
 
 h1 {
-	font-size: $font-size-large;
+	font-size: $font-size-xx-large;
+
+  @media (min-width: $tablet-breakpoint) {
+    font-size: $font-size-xxx-large;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    font-size: $font-size-xxxx-large;
+  }      
 }
 
 h2 {
   	font-size: $font-size-medium;	
+    
+    @media (min-width: $tablet-breakpoint) {
+      font-size: $font-size-xx-large;
+    }   
 }
 
 h3 {
   	font-size: $m-size;	
+ 
+    @media (min-width: $desktop-breakpoint) {
+      font-size: $font-size-large;
+    }   
 }
 
 h4 {

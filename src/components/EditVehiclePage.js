@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import VehicleForm from './VehicleForm';
 import { startEditVehicle, startRemoveVehicle } from '../actions/vehicles';
+import strings from '../resources/strings';
 
 export class EditVehiclePage extends React.Component {
   onSubmit = (vehicle) => {
@@ -17,7 +18,7 @@ export class EditVehiclePage extends React.Component {
       <div>
         <div className="page-header">
           <div className="content-container">
-            <h1 className="page-header__title">Editar Vehiculo</h1>
+            <h1 className="page-header__title">{strings.site.vehicle.editVehicle}</h1>
           </div>
         </div>
         <div className="content-container">
@@ -25,7 +26,7 @@ export class EditVehiclePage extends React.Component {
             vehicle={this.props.vehicle}
             onSubmit={this.onSubmit}
           />
-          <button className="button button--secondary" onClick={this.onRemove}>Eliminar Vehiculo</button>
+          <button className="button button--secondary" onClick={this.onRemove}>{strings.site.vehicle.removeVehicle}</button>
         </div>
       </div>
     );

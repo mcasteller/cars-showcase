@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 import numeral from 'numeral';
 import { connect } from 'react-redux';
+import ReactHtmlParser from 'react-html-parser';
 import SimpleSlider from './SimpleSlider'; 
 
 export class VehicleDetailPage extends React.Component {
@@ -30,14 +31,13 @@ export class VehicleDetailPage extends React.Component {
 		      <SimpleSlider 
 		      	items={this.state.filesURL}
 		      	/>
-		      <h3 className="list-item__title">{this.state.brand}</h3>
-   		      <h3 className="list-item__title">{this.state.trim}</h3>
-		      <h3 className="list-item__title">{this.state.amount}</h3>
-		      <h3 className="list-item__title">{this.state.year}</h3>
-		      <h3 className="list-item__title">{this.state.engine}</h3>
-		      <h3 className="list-item__title">{this.state.kilometers}</h3>
-		      <h3 className="list-item__title">{this.state.color}</h3>
-		      <p className="list-item__title">{this.state.description}</p>
+	          <h3><span>{strings.site.vehicle.brand}: </span>{this.state.brand}</h3>
+	   	      <h3><span>{strings.site.vehicle.trim}: </span>{this.state.trim}</h3>
+		      <h3><span>{strings.site.vehicle.year}: </span>{this.state.year}</h3>
+		   	  <h3><span>{strings.site.vehicle.engine}: </span>{this.state.engine}</h3>
+		      <h3><span>{strings.site.vehicle.kilometers}: </span>{this.state.kilometers}</h3>
+	   	      <h3><span>{strings.site.vehicle.color}: </span>{this.state.color}</h3>
+		      {ReactHtmlParser(this.state.description)}
 		    </div>
 		)	
 	}

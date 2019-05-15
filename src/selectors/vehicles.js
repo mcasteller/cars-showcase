@@ -7,7 +7,10 @@ export default (vehicles, { text, sortBy, startDate, endDate }) => {
     const createdAtMoment = moment(vehicle.createdAt);
     const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
     const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
-    const textMatch = vehicle.description.toLowerCase().includes(text.toLowerCase());
+    const textMatch = vehicle.description.toLowerCase().includes(text.toLowerCase()) ||
+                      vehicle.brand.toLowerCase().includes(text.toLowerCase()) ||
+                      vehicle.trim.toLowerCase().includes(text.toLowerCase()) ||
+                      vehicle.shortDescription.toLowerCase().includes(text.toLowerCase());
 
     return startDateMatch && endDateMatch && textMatch;
   }).sort((a, b) => {

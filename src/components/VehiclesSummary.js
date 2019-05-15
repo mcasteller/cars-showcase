@@ -36,7 +36,7 @@ export const VehiclesSummary = () => {
     {//   <div className="content-container">
     //     {/* <h1 className="page-header__title">Viewing <span>{vehicleCount}</span> {vehicleWord} totalling <span>{formattedExpensesTotal}</span></h1> */}
         
-        <h2 className="page-header">Vehiculos en Venta</h2>
+        <h2>Vehiculos en Venta</h2>
         // <div>
     //       {
     //         categories.map(({ name, id }) => {

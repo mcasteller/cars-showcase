@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import ReactQuill from 'react-quill';
 import FileSelect from './FileSelect';
+import strings from '../resources/strings';
 
 export default class VehicleForm extends React.Component {
   constructor(props) {
@@ -112,7 +113,7 @@ export default class VehicleForm extends React.Component {
         />
         <input
           type="textarea"
-          placeholder="Marca"
+          placeholder={strings.site.vehicle.brand}
           autoFocus
           className="text-input"
           value={this.state.brand || ''}
@@ -120,7 +121,7 @@ export default class VehicleForm extends React.Component {
         />
         <input
           type="textarea"
-          placeholder="Modelo"
+          placeholder={strings.site.vehicle.trim}
           autoFocus
           className="text-input"
           value={this.state.trim || ''}
@@ -128,46 +129,46 @@ export default class VehicleForm extends React.Component {
         />
         <input
           type="text"
-          placeholder="Año"
+          placeholder={strings.site.vehicle.year}
           className="text-input"
           value={this.state.year}
           onChange={this.onYearChange}
         />
         <input
           type="text"
-          placeholder="Valor"
+          placeholder={strings.site.vehicle.amount}
           className="text-input"
           value={this.state.amount}
           onChange={this.onAmountChange}
         />
         <input
           type="text"
-          placeholder="Motor"
+          placeholder={strings.site.vehicle.engine}
           className="text-input"
           value={this.state.engine}
           onChange={this.onEngineChange}
         />
         <input
           type="text"
-          placeholder="Kilometros"
+          placeholder={strings.site.vehicle.kilometers}
           className="text-input"
           value={this.state.kilometers}
           onChange={this.onKilometersChange}
         />
         <input
           type="text"
-          placeholder="Color"
+          placeholder={strings.site.vehicle.color}
           className="text-input"
           value={this.state.color}
           onChange={this.onColorChange}
         />
         <ReactQuill 
-          placeholder="Agregar Descripcion Vehiculo"
+          placeholder={strings.site.vehicle.description}
           value={this.state.description}    
           onChange={this.onDescriptionChange} 
         />
         <ReactQuill
-          placeholder="Descripcion breve (aparece en el listado de vehiculos)"
+          placeholder={strings.site.vehicle.shortDescription}
           value={this.state.shortDescription}
           onChange={this.onShortDescriptionChange}
         />

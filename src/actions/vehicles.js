@@ -79,10 +79,17 @@ export const editVehicle = (id, updates) => ({
 export const startEditVehicle = (id, updates) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
-    return database.ref(`vehicles/${id}`).update(updates).then(() => {
-      dispatch(editVehicle(id, updates));
+
+
+    saveFiles(updates.filesURL).then((filesURL) => {
+   
+      const vehicleUpdates = { ...updates, filesURL };
+
+      database.ref(`vehicles/${id}`).update(vehicleUpdates).then(() => {
+        dispatch(editVehicle(id, vehicleUpdates));
+      });
     });
-  };
+  }
 };
 
 // SET_VEHICLES

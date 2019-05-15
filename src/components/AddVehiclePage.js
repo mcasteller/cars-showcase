@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import VehicleForm from './VehicleForm';
 import { startAddVehicle } from '../actions/vehicles';
+import strings from '../resources/strings';
 
 class AddVehiclePage extends React.Component {
   onSubmit = (vehicle) => {
@@ -13,7 +14,7 @@ class AddVehiclePage extends React.Component {
       <div>
         <div className="page-header">
           <div className="content-container">
-            <h1 className="page-header__title">Agregar Vehiculo</h1>
+            <h1 className="page-header__title">{strings.site.vehicle.addVehicle}</h1>
           </div>
         </div>
         <div className="content-container">

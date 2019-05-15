@@ -1,0 +1,17 @@
+.footer {
+  background: $dark-blue;
+}
+
+.footer__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__title {
+  color: white;
+  text-decoration: none;
+  h1 {
+    margin: 0;
+  }
+}
