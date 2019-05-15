@@ -5,6 +5,7 @@ import numeral from 'numeral';
 import { connect } from 'react-redux';
 import ReactHtmlParser from 'react-html-parser';
 import SimpleSlider from './SimpleSlider'; 
+import strings from '../resources/strings';
 
 export class VehicleDetailPage extends React.Component {
 	constructor(props) {
