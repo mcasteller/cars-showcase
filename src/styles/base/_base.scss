@@ -13,6 +13,10 @@ body {
   line-height: 1.6;
 }
 
+.page-body {
+  min-height: 100vh;
+}
+
 h1 {
 	font-size: $font-size-large;
 }

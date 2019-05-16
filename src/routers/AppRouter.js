@@ -12,6 +12,7 @@ import VehicleDetailPage from '../components/VehicleDetailPage';
 import AddVehiclePage from '../components/AddVehiclePage';
 import EditVehiclePage from '../components/EditVehiclePage';
 import AdminPage from '../components/AdminPage';
+import ContactUsPage from '../components/ContactUsPage';
 
 export const history = createHistory();
 
@@ -23,6 +24,7 @@ const AppRouter = () => {
         <Switch>
           <PublicRoute path="/" component={HomePage} exact />
           <PublicRoute path="/login" component={LoginPage} />
+          <PublicRoute path="/contacto" component={ContactUsPage} />
           <PublicRoute path="/admin/edit/:vehicleId" component={EditVehiclePage}/>
           <PublicRoute path="/admin/edit" component={VehicleList}/>
           <PublicRoute path="/admin/create" component={AddVehiclePage}/>

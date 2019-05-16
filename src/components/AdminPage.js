@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import strings from '../resources/strings';
 
 export const AdminPage = (props) => (
-  <div className="content-container">
+  <div className="page-body content-container">
     <Link to="/admin/create">
       <h2>{strings.site.vehicle.addVehicles}</h2>
     </Link>

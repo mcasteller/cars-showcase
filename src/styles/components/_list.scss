@@ -15,14 +15,40 @@
     }
   }
 
-  .media-body {
-    padding: 20px 5vw;
-    text-align: left;
+  .media {
+    border-top: $grey 4px solid;
+    padding-top: 10px;
+    display: inline-block;
 
+    @media (min-width: $mobile-breakpoint) {
+      display: flex;
+    } 
+
+    img {
+      width: 100%;
+
+      @media (min-width: $mobile-breakpoint) {
+        width: 50%;
+      } 
+    }
+  }
+
+  .media-body {
+    padding: 1rem 0 2rem 0;
+    text-align: left;
+    
     span {
       color: $grey;
-      font-size: medium;
+      font-size: $font-size-medium;
+
+      @media (min-width: $desktop-breakpoint) {
+        font-size: $font-size-large;
+      }       
     }
+
+    @media (min-width: $mobile-breakpoint) {
+        padding: 0 5vw;
+    } 
   }
 
   @media (min-width: $desktop-breakpoint) {

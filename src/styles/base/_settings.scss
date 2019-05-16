@@ -1,16 +1,23 @@
+// 1rem = 16px
+
 // Colors
 $dark-grey: #333;
-$grey: #666;
+$grey: #848482;
 $blue: #1c88bf;
 $black: #000000;
 $dark-blue: #364051;
 $off-white: #f7f7f7;
+
 // Font Size
+$font-size-xxxx-large: 9rem;
+$font-size-xxx-large: 5rem;
+$font-size-xx-large: 3rem;
 $font-size-x-large: 1.8rem;
-$font-size-large: 2vw !default;
-$font-size-medium: 1.5rem;
+$font-size-large: 1.8rem;
+$font-size-medium: 1.4rem;
 $font-size-small: 1.4rem;
 $font-size-x-small: 1.4rem;
+
 // Spacing
 $s-size: 1.2rem;
 $m-size: 1.6rem;
@@ -18,4 +25,6 @@ $l-size: 3.2rem;
 $xl-size: 4.8rem;
 
 // Breakpoints
-$desktop-breakpoint: 45rem;
+$desktop-breakpoint: 64rem; // 1024px
+$tablet-breakpoint: 48rem; // 768px
+$mobile-breakpoint: 35.5rem; // 568px

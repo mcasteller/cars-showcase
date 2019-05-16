@@ -92,10 +92,10 @@ export default class VehicleForm extends React.Component {
       this.props.onSubmit({
         brand: this.state.brand,
         trim: this.state.trim,
-        amount: parseFloat(this.state.amount, 10) * 100,
+        amount: parseFloat(this.state.amount, 10),
         year: parseInt(this.state.year, 10),
         engine: this.state.engine,
-        kilometers: parseFloat(this.state.kilometers, 10) * 100,
+        kilometers: parseFloat(this.state.kilometers, 10),
         color: this.state.color,
         description: this.state.description,
         shortDescription: this.state.shortDescription,
@@ -174,7 +174,7 @@ export default class VehicleForm extends React.Component {
           onChange={this.onShortDescriptionChange}
         />
         <div>
-          <button className="button">Guardar Vehiculo</button>
+          <button className="button">{strings.site.vehicle.saveVehicle}</button>
         </div>
       </form>
     )

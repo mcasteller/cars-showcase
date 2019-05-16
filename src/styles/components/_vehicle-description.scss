@@ -1,0 +1,11 @@
+.vehicle-description {
+	font-size: $font-size-x-large;
+    display: block;
+    padding: 3rem 0;
+	border-top: $grey solid 3px;
+    margin: 2rem 0;
+
+    ul {
+        text-align: left;
+    }
+}

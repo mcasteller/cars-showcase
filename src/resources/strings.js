@@ -1,6 +1,9 @@
 const strings = {
   site: {
+    contactUs: 'Contacto',
+    contactUsDetail: 'Para dudas o consultas por favor escribir al siguiente correo electronico',
     description: 'Compra y venta de autos usados',
+    email: 'newtrenautos@gmail.com',
     fileRatioWarning: 'Por favor seleccionar imagenes con proporcion 16:9 o similar',
     goHome: 'Go home',
     home: 'Inicio',
@@ -24,6 +27,7 @@ const strings = {
       engine: "Motor",
       kilometers: "Kilometros",
       removeVehicle: 'Eliminar Vehiculo',
+      saveVehicle: 'Guardar Vehiculo',
       shortDescription: 'Descripcion breve (aparece en el listado de vehiculos)',
       trim: "Modelo",
       year: "Año"
