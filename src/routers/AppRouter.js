@@ -29,10 +29,10 @@ const AppRouter = () => {
           <PublicRoute path="/" component={HomePage} exact />
           <Route path="/login" component={LoginPage} />
           <PublicRoute path="/contacto" component={ContactUsPage} />
+          <PublicRoute path="/vehiculos/:vehicleId" component={VehicleDetailPage}/>
           <PublicRoute path="/admin/vehiculos/edit/:vehicleId" component={EditVehiclePage}/>
           <PublicRoute path="/admin/vehiculos/edit" component={VehicleList}/>
           <PublicRoute path="/admin/vehiculos/create" component={AddVehiclePage}/>
-          <PublicRoute path="/admin/vehiculos/:vehicleId" component={VehicleDetailPage}/>
           <PublicRoute path="/articulos/:articleId" component={ArticleDetailPage}/>
           <PublicRoute path="/articulos" component={ArticleList} />          
           <PublicRoute path="/admin/articulos/edit/:articleId" component={EditArticlePage}/>
