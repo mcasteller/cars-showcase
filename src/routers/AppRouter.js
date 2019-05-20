@@ -25,9 +25,9 @@ const AppRouter = () => {
           <PublicRoute path="/" component={HomePage} exact />
           <PublicRoute path="/login" component={LoginPage} />
           <PublicRoute path="/contacto" component={ContactUsPage} />
-          <PublicRoute path="/admin/edit/:vehicleId" component={EditVehiclePage}/>
-          <PublicRoute path="/admin/edit" component={VehicleList}/>
-          <PublicRoute path="/admin/create" component={AddVehiclePage}/>
+          <PublicRoute path="/admin/vehiculos/edit/:vehicleId" component={EditVehiclePage}/>
+          <PublicRoute path="/admin/vehiculos/edit" component={VehicleList}/>
+          <PublicRoute path="/admin/vehiculos/create" component={AddVehiclePage}/>
           <PublicRoute path="/admin/vehiculos/:vehicleId" component={VehicleDetailPage}/>
           <PublicRoute path="/admin" component={AdminPage}/>
           <PublicRoute path="/vehiculos/:vehicleId" component={VehicleDetailPage}/>

@@ -42,7 +42,7 @@ store.dispatch(startSetVehicles()).then(() => {
 // If not move to homepage
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    store.dispatch(login(user.uid));
+    store.dispatch(login(user.uid, user.email));
     renderApp();
     history.push('/admin');
   } else {
