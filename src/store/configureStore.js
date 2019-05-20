@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import authReducer from '../reducers/auth';
 import vehiclesReducer from '../reducers/vehicles';
 import filtersReducer from '../reducers/filters';
+import articlesReducer from '../reducers/articles';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -12,7 +13,8 @@ export default () => {
     combineReducers({
       auth: authReducer,
       filters: filtersReducer,	
-      vehicles: vehiclesReducer
+      vehicles: vehiclesReducer,
+      articles: articlesReducer
     }),
     composeEnhancers(applyMiddleware(thunk))
   );

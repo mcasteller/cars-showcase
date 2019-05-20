@@ -18,25 +18,25 @@ export const LoginPage = () => {
 	return (
 	  <div className="box-layout">
 	    <div className="box-layout__box">
-	      <h1 className="box-layout__title">{strings.site.name}</h1>
-	       <form className="form" onSubmit={onSubmit}>
-	        <input
-	          type="textarea"
-	          placeholder={strings.site.vehicle.trim}
-	          autoFocus
-	          className="text-input"
-          	  onChange={(e) => setUser(e.target.value)}
-	        />
-	        <input
-	          type="text"
-	          placeholder={strings.site.vehicle.year}
-	          className="text-input"
-          	  onChange={(e) => setPassword(e.target.value)}
-	        />
-	        <div>
-	          <button className="button">{strings.site.login}</button>
-	        </div>
-	      </form>
+	      	<h2 className="box-layout__title">{strings.site.name}</h2>
+	    	<h3>{strings.site.adminUserMessage}</h3>
+			<form className="form" onSubmit={onSubmit}>
+			<input
+			  type="textarea"
+			  placeholder={strings.site.user}
+			  className="text-input"
+				  onChange={(e) => setUser(e.target.value)}
+			/>
+			<input
+			  type="text"
+			  placeholder={strings.site.password}
+			  className="text-input"
+				  onChange={(e) => setPassword(e.target.value)}
+			/>
+			<div>
+			  <button className="button">{strings.site.login}</button>
+			</div>
+			</form>
 	    </div>
 	  </div>
 	);

@@ -37,6 +37,9 @@ const Menu = (props) => (
         <NavLink className="header__title" to="/">
           <h2>{strings.site.home}</h2>
         </NavLink>
+        <NavLink className="header__title" to="/articulos">
+          <h2>{strings.site.articles}</h2>
+        </NavLink>
         <NavLink className="header__title" to="/contacto">
           <h2>{strings.site.contactUs}</h2>
         </NavLink>

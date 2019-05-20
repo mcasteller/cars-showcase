@@ -13,6 +13,10 @@ import AddVehiclePage from '../components/AddVehiclePage';
 import EditVehiclePage from '../components/EditVehiclePage';
 import AdminPage from '../components/AdminPage';
 import ContactUsPage from '../components/ContactUsPage';
+import ArticleList from '../components/ArticleList';
+import AddArticlePage from '../components/AddArticlePage';
+import EditArticlePage from '../components/EditArticlePage';
+import ArticleDetailPage from '../components/ArticleDetailPage';
 
 export const history = createHistory();
 
@@ -23,14 +27,18 @@ const AppRouter = () => {
       <div>
         <Switch>
           <PublicRoute path="/" component={HomePage} exact />
-          <PublicRoute path="/login" component={LoginPage} />
+          <Route path="/login" component={LoginPage} />
           <PublicRoute path="/contacto" component={ContactUsPage} />
           <PublicRoute path="/admin/vehiculos/edit/:vehicleId" component={EditVehiclePage}/>
           <PublicRoute path="/admin/vehiculos/edit" component={VehicleList}/>
           <PublicRoute path="/admin/vehiculos/create" component={AddVehiclePage}/>
           <PublicRoute path="/admin/vehiculos/:vehicleId" component={VehicleDetailPage}/>
+          <PublicRoute path="/articulos/:articleId" component={ArticleDetailPage}/>
+          <PublicRoute path="/articulos" component={ArticleList} />          
+          <PublicRoute path="/admin/articulos/edit/:articleId" component={EditArticlePage}/>
+          <PublicRoute path="/admin/articulos/edit" component={ArticleList}/>
+          <PublicRoute path="/admin/articulos/create" component={AddArticlePage}/>
           <PublicRoute path="/admin" component={AdminPage}/>
-          <PublicRoute path="/vehiculos/:vehicleId" component={VehicleDetailPage}/>
           <Route component={NotFoundPage} />
         </Switch>
       </div>

@@ -1,8 +1,15 @@
 const strings = {
   site: {
+    adminUserMessage: 'Login Mantenimiento',
     article: {
       addArticle: 'Agregar Articulo',
-      editArticle: 'Editar Articulo'
+      description: 'Descripcion Articulo',
+      editArticle: 'Editar Articulo',
+      removeArticle: 'Eliminar Articulo',
+      save: 'Guardar',
+      shortDescription: 'Breve Descripcion',
+      subTitle: 'Sub Titulo Articulo',
+      title: 'Titulo Articulo'
     },
     articles: 'Articulos',
     contactUs: 'Contacto',
@@ -18,9 +25,12 @@ const strings = {
     loginGoogle: 'Login with Google',
     manage: 'Administrar',
     name: 'New Trend Autos',
-    noFilesSelected: 'No files selected!',
-    noVehicles: 'No hay vehiculos',
+    noArticles: 'No hay articulos disponibles!',
+    noFilesSelected: 'No hay archivos seleccionados!',
+    noVehicles: 'No hay vehiculos disponibles!',
+    password: 'Contraseña',
     search: "Buscar",
+    user: 'Usuario',
     vehicle: {
       addVehicle: 'Agregar Vehiculo',
       addVehicles: 'Agregar Vehiculos',

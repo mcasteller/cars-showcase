@@ -17,7 +17,7 @@ export const AdminPage = (props) => (
       <h2>{strings.site.article.addArticle}</h2>
     </Link>
     <Link to="/admin/articulos/edit">
-      <h2>{strings.site.article.addArticle}</h2>
+      <h2>{strings.site.article.editArticle}</h2>
     </Link>
   </div>
 

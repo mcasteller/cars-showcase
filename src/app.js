@@ -10,6 +10,7 @@ import 'react-quill/dist/quill.snow.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 import { startSetVehicles } from './actions/vehicles';
+import { startSetArticles } from './actions/articles';
 
 // Create Redux store
 const store = configureStore();
@@ -31,23 +32,27 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
-store.dispatch(startSetVehicles()).then(() => {
+Promise.all([
+  store.dispatch(startSetVehicles()),
+  store.dispatch(startSetArticles())
+]).then(() => {
   renderApp();
+
   if (history.location.pathname === '/') {
     history.push('/');
   }
-});
 
-// Detect auth state change, if authorized move to proper section
-// If not move to homepage
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    store.dispatch(login(user.uid, user.email));
-    renderApp();
-    history.push('/admin');
-  } else {
-    store.dispatch(logout());
-    renderApp();
-    history.push('/');
-  }
+  // Detect auth state change, if authorized move to proper section
+  // If not move to homepage
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      store.dispatch(login(user.uid, user.email));
+      renderApp();
+      history.push('/admin');
+    } else {
+      store.dispatch(logout());
+      renderApp();
+      history.push('/');
+    }
+  });
 });
