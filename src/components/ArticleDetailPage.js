@@ -15,7 +15,7 @@ export class ArticleDetailPage extends React.Component {
 	      title: props.article ? props.article.title : '', 
 	      subTitle: props.article ? props.article.subTitle : '', 
 	      description: props.article ? props.article.description : '',
-	      filesURL: props.article ? props.article.filesURL : '',
+	      files: props.article ? props.article.files : '',
 	      error: ''
 	    };
 	};
@@ -24,7 +24,7 @@ export class ArticleDetailPage extends React.Component {
 		return (
 		    <div className="content-container">
 		      <SimpleSlider
-		      	items={this.state.filesURL || [] }
+		      	items={this.state.files || [] }
 		      	/>
 	          <h2>{this.state.title}</h2>
 	   	      <h3>{this.state.subTitle}</h3>

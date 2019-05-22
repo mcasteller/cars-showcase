@@ -19,7 +19,7 @@ export default class VehicleForm extends React.Component {
       description: props.vehicle ? props.vehicle.description : '',
       shortDescription: props.vehicle ? props.vehicle.shortDescription : '',
       calendarFocused: false,
-      filesURL: props.vehicle ? props.vehicle.filesURL : '',
+      files: props.vehicle ? props.vehicle.files : '',
       error: ''
     };
   }
@@ -78,8 +78,8 @@ export default class VehicleForm extends React.Component {
     this.setState(() => ({ shortDescription }));
   };
       
-  onFilesChange = (filesURL) => {
-    this.setState(() => filesURL);
+  onFilesChange = (files) => {
+    this.setState(() => files);
   }
 
   onSubmit = (e) => {
@@ -99,7 +99,7 @@ export default class VehicleForm extends React.Component {
         color: this.state.color,
         description: this.state.description,
         shortDescription: this.state.shortDescription,
-        filesURL: this.state.filesURL
+        files: this.state.files
       });
     }
   };
@@ -109,7 +109,7 @@ export default class VehicleForm extends React.Component {
         {this.state.error && <p className="form__error">{this.state.error}</p>}
         <h3>{strings.site.fileRatioWarning}</h3>
         <FileSelect 
-          filesURL={this.state.filesURL}
+          files={this.state.files}
           onChange={this.onFilesChange} 
         />
         <input

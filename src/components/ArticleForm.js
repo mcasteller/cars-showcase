@@ -13,7 +13,7 @@ export default class ArticleForm extends React.Component {
       subTitle: props.article ? props.article.subTitle : '', 
       description: props.article ? props.article.description : '',
       shortDescription: props.article ? props.article.shortDescription : '',
-      filesURL: props.article ? props.article.filesURL : '',
+      files: props.article ? props.article.files : '',
       error: ''
     };
   }
@@ -38,8 +38,8 @@ export default class ArticleForm extends React.Component {
     this.setState(() => ({ shortDescription }));
   };
       
-  onFilesChange = (filesURL) => {
-    this.setState(() => filesURL);
+  onFilesChange = (files) => {
+    this.setState(() => files);
   }
 
   onSubmit = (e) => {
@@ -54,7 +54,7 @@ export default class ArticleForm extends React.Component {
         subTitle: this.state.subTitle,
         description: this.state.description,
         shortDescription: this.state.shortDescription,
-        filesURL: this.state.filesURL
+        files: this.state.files
       });
     }
   };
@@ -64,7 +64,7 @@ export default class ArticleForm extends React.Component {
         {this.state.error && <p className="form__error">{this.state.error}</p>}
         <h3>{strings.site.fileRatioWarning}</h3>
         <FileSelect 
-          filesURL={this.state.filesURL}
+          files={this.state.files}
           onChange={this.onFilesChange} 
         />
         <input

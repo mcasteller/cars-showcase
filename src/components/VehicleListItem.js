@@ -11,7 +11,7 @@ export class VehicleListItem extends React.Component {
       brand: props.brand ? props.brand : '', 
       trim: props.trim ? props.trim : '', 
       amount: props.amount ? (props.amount).toString() : '',
-      filesURL: props.filesURL ? props.filesURL : '',
+      files: props.files ? props.files : '',
       error: ''
     };
 
@@ -22,7 +22,7 @@ export class VehicleListItem extends React.Component {
 			<Media>
 			  <img
 			    className="mr-3"
-			    src={this.state.filesURL[0]}
+			    src={this.state.files[0].url}
 			    alt="Generic placeholder"
 			  />
 			  <Media.Body>

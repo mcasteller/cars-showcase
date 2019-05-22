@@ -1,8 +1,6 @@
 import React from 'react';
 import strings from '../resources/strings';
 
-//window.URL = window.URL || window.webkitURL;
-
 class FileSelect extends React.Component {
     constructor(props) {
         super(props);
@@ -16,11 +14,10 @@ class FileSelect extends React.Component {
 
     componentDidMount() {
       // Typical usage (don't forget to compare props):
-      if (this.props.filesURL) {
+      if (this.props.files) {
         //run onchange
-         const files = this.props.filesURL,
-              filesURL = [],
-              fileList = document.getElementById("fileList");
+         const files = this.props.files,
+               fileList = document.getElementById("fileList");
        
         if (!files.length) {
             fileList.innerHTML = "<p>No files selected!</p>";
@@ -34,18 +31,8 @@ class FileSelect extends React.Component {
                 list.appendChild(li);
                 
                 const img = document.createElement("img");
-                img.src = this.props.filesURL[i];
+                img.src = files[i].url;
                 img.height = 60;
-     
-                img.onload = function() {
-                   // window.URL.revokeObjectURL(this.src);
-                }
-     
-                filesURL.push({
-                    "URL": img.src,
-                    "name": files[i].name,
-                    "src": files[i]
-                });
 
                 li.appendChild(img);
                 const info = document.createElement("span");
@@ -57,42 +44,42 @@ class FileSelect extends React.Component {
     }
 
     onChange = (e) => {
-        const files = e.target.files,
-              filesURL = [],
+        const selectedFiles = e.target.files,
+              files = [],
               fileList = document.getElementById("fileList");
        
-        if (!files.length) {
+        if (!selectedFiles.length) {
             fileList.innerHTML = "<p>No files selected!</p>";
         } else {
             fileList.innerHTML = "";
             const list = document.createElement("ul");
             fileList.appendChild(list);
             
-            for (let i = 0; i < files.length; i++) {
+            for (let i = 0; i < selectedFiles.length; i++) {
                 const li = document.createElement("li");
                 list.appendChild(li);
                 
                 const img = document.createElement("img");
-                img.src = window.URL.createObjectURL(files[i]);
+                img.src = window.URL.createObjectURL(selectedFiles[i]);
                 img.height = 60;
      
                 img.onload = function() {
                    // window.URL.revokeObjectURL(this.src);
                 }
      
-                filesURL.push({
-                    "URL": img.src,
-                    "name": files[i].name,
-                    "src": files[i]
+                files.push({
+                    "url": img.src,
+                    "name": selectedFiles[i].name,
+                    "src": selectedFiles[i]
                 });
 
                 li.appendChild(img);
                 const info = document.createElement("span");
-                info.innerHTML = files[i].name + ": " + files[i].size + " bytes";
+                info.innerHTML = selectedFiles[i].name + ": " + selectedFiles[i].size + " bytes";
                 li.appendChild(info);
             }
             // call external function
-            this.props.onChange({ filesURL })
+            this.props.onChange({ files })
         }
     };
 

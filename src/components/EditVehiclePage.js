@@ -31,13 +31,13 @@ export class EditVehiclePage extends React.Component {
       </div>
     );
   }
-};
+}
 
 const mapStateToProps = (state, props) => ({
   vehicle: state.vehicles.find((vehicle) => vehicle.id === props.match.params.vehicleId)
 });
 
-const mapDispatchToProps = (dispatch, props) => ({
+const mapDispatchToProps = (dispatch) => ({
   startEditVehicle: (id, vehicle) => dispatch(startEditVehicle(id, vehicle)),
   startRemoveVehicle: (data) => dispatch(startRemoveVehicle(data))
 });

@@ -10,7 +10,7 @@ export class ArticleListItem extends React.Component {
     this.state = {
       title: props.title ? props.title : '', 
       subTitle: props.subTitle ? props.subTitle : '', 
-      filesURL: props.filesURL ? props.filesURL : '',
+      files: props.files ? props.files : '',
       error: ''
     };
   }
@@ -20,7 +20,7 @@ export class ArticleListItem extends React.Component {
 			<Media>
 			  <img
 			    className="mr-3"
-			    src={this.state.filesURL[0]}
+			    src={this.state.files[0]}
 			    alt="Generic placeholder"
 			  />
 			  <Media.Body>

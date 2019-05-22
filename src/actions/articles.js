@@ -15,12 +15,12 @@ export const startAddArticle = (articleData = {}) => {
       subTitle = '',  
       description = '',
       shortDescription = '',
-      filesURL = []
+      files = []
     } = articleData;
 
-    saveFiles(articleData.filesURL).then((filesURL) => {
+    saveFiles(articleData.files).then((files) => {
    
-      const article = { title, subTitle, description, shortDescription, filesURL };
+      const article = { title, subTitle, description, shortDescription, files };
 
       database.ref(`articles`).push(article).then((ref) => {
         dispatch(addArticle({
@@ -75,9 +75,9 @@ export const startEditArticle = (id, updates) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
 
-    saveFiles(updates.filesURL).then((filesURL) => {
+    saveFiles(updates.files).then((files) => {
    
-      const articleUpdates = { ...updates, filesURL };
+      const articleUpdates = { ...updates, files };
 
       database.ref(`articles/${id}`).update(articleUpdates).then(() => {
         dispatch(editArticle(id, articleUpdates));

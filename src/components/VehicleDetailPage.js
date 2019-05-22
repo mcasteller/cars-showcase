@@ -21,7 +21,7 @@ export class VehicleDetailPage extends React.Component {
 	      color: props.vehicle ? props.vehicle.color : '', 
 	      description: props.vehicle ? props.vehicle.description : '',
 	      shortDescription: props.vehicle ? props.vehicle.shortDescription : '',
-	      filesURL: props.vehicle ? props.vehicle.filesURL : '',
+	      files: props.vehicle ? props.vehicle.files : '',
 	      error: ''
 	    };
 	};
@@ -30,7 +30,7 @@ export class VehicleDetailPage extends React.Component {
 		return (
 		    <div className="content-container">
 		      <SimpleSlider
-		      	items={this.state.filesURL || [] }
+		      	items={this.state.files || [] }
 		      	/>
 	          <h3><span>{strings.site.vehicle.brand}: </span>{this.state.brand}</h3>
 	   	      <h3><span>{strings.site.vehicle.trim}: </span>{this.state.trim}</h3>
