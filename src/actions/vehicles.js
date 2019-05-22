@@ -49,16 +49,16 @@ const saveVehicle = (vehicle, vehiclePath) => {
   return database.ref(`vehicles`).push(vehicle);
 }
 
-const updateVehicle = async (vehiclePath, updatedFiles) => {
-  await database.ref(`${vehiclePath}/files`).set(updatedFiles)
-  return await database.ref(`${vehiclePath}/files`).once('value');
-}
-
 const saveFiles = async (vehiclePath, files, removeExistingFiles, getState) => {
   if (removeExistingFiles) {
     await removeFiles(vehiclePath, getState);
   }
   return await Promise.all(files.map(file => saveFile(vehiclePath, file)))
+}
+
+const updateVehicle = async (vehiclePath, updatedFiles) => {
+  await database.ref(`${vehiclePath}/files`).set(updatedFiles)
+  return await database.ref(`${vehiclePath}/files`).once('value');
 }
 
 const removeFiles = async (vehiclePath, getState) => {
@@ -99,19 +99,19 @@ export const removeVehicle = ({ id } = {}) => ({
 });
 
 export const startRemoveVehicle = ({ id } = {}) => {
-  return (dispatch, getState) => {
-    const uid = getState().auth.uid;
+  return async (dispatch, getState) => {
+    
     return database.ref(`vehicles/${id}`).remove().then(() => {
+      removeFiles(id, getState)
       dispatch(removeVehicle({ id }));
     });
   };
 };
 
 // EDIT_VEHICLE
-export const editVehicle = (id, updates) => ({
+export const editVehicle = (updates) => ({
   type: 'EDIT_VEHICLE',
-  id,
-  updates
+  ...updates
 });
 
 export const startEditVehicle = (id, updates) => {

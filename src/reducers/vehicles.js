@@ -16,8 +16,7 @@ export default (state = vehiclesReducerDefaultState, action) => {
       return state.map((vehicle) => {
         if (vehicle.id === action.id) {
           return {
-            ...vehicle,
-            ...action.updates
+            ...action
           };
         } else {
           return vehicle;

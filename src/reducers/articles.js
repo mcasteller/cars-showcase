@@ -17,7 +17,7 @@ export default (state = articlesReducerDefaultState, action) => {
         if (article.id === action.id) {
           return {
             ...article,
-            ...action.updates
+            ...action
           };
         } else {
           return article;

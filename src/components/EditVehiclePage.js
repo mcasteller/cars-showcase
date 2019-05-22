@@ -7,11 +7,11 @@ import strings from '../resources/strings';
 export class EditVehiclePage extends React.Component {
   onSubmit = (vehicle) => {
     this.props.startEditVehicle(this.props.vehicle.id, vehicle);
-    this.props.history.push('/');
+    this.props.history.push('/admin');
   };
   onRemove = () => {
     this.props.startRemoveVehicle({ id: this.props.vehicle.id });
-    this.props.history.push('/');
+    this.props.history.push('/admin');
   };
   render() {
     return (

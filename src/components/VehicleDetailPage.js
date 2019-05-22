@@ -14,7 +14,7 @@ export class VehicleDetailPage extends React.Component {
 	    this.state = {
 	      brand: props.vehicle ? props.vehicle.brand : '', 
 	      trim: props.vehicle ? props.vehicle.trim : '', 
-	      amount: props.vehicle ? (props.vehicle.amount / 100).toString() : '',
+	      amount: props.vehicle ? (props.vehicle.amount).toString() : '',
 	      year: props.vehicle ? (props.vehicle.year).toString() : '',
 	      engine: props.vehicle ? props.vehicle.engine : '', 
 	      kilometers: props.vehicle ? (props.vehicle.kilometers).toString() : '',

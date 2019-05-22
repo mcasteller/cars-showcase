@@ -7,7 +7,7 @@ import strings from '../resources/strings';
 class AddVehiclePage extends React.Component {
   onSubmit = (vehicle) => {
     this.props.startAddVehicle(vehicle);
-    this.props.history.push('/');
+    this.props.history.push('/admin');
   };
   render() {
     return (
