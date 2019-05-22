@@ -19,10 +19,10 @@ const UserMenu = (props) => (
     <div className="content-container">
       <div className="header__content">
         <NavLink className="header__title" to="/admin">
-          <h2>{strings.site.home}</h2>
+          <h3>{strings.site.home}</h3>
         </NavLink>
         <div className="header__title" to="/contacto">
-          <h2>{strings.site.welcome} {props.userEmail}</h2>
+          <h3>{strings.site.welcome} {props.userEmail}</h3>
           <button className="button button--link" onClick={props.startLogout}>{strings.site.logout}</button>          
         </div>
       </div>
@@ -35,13 +35,13 @@ const Menu = (props) => (
     <div className="content-container">
       <div className="header__content">
         <NavLink className="header__title" to="/">
-          <h2>{strings.site.home}</h2>
+          <h3>{strings.site.home.toUpperCase()}</h3>
         </NavLink>
         <NavLink className="header__title" to="/articulos">
-          <h2>{strings.site.articles}</h2>
+          <h3>{strings.site.articles.toUpperCase()}</h3>
         </NavLink>
         <NavLink className="header__title" to="/contacto">
-          <h2>{strings.site.contactUs}</h2>
+          <h3>{strings.site.contactUs.toUpperCase()}</h3>
         </NavLink>
       </div>
     </div>
