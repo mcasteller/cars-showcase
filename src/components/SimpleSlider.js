@@ -12,10 +12,10 @@ class SimpleSlider extends React.Component {
     };
     return (
       <Slider {...settings}>
-        {this.props.items.map((fileURL) => {
+        {this.props.items.map((file) => {
           return (
-            <div key={this.props.items.indexOf(fileURL)}>
-              <img src={fileURL}></img>
+            <div key={this.props.items.indexOf(file)}>
+              <img src={file.url}></img>
             </div>
           ) 
         })}

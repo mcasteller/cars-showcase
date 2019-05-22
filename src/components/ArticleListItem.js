@@ -20,7 +20,7 @@ export class ArticleListItem extends React.Component {
 			<Media>
 			  <img
 			    className="mr-3"
-			    src={this.state.files[0]}
+			    src={this.state.files[0].url}
 			    alt="Generic placeholder"
 			  />
 			  <Media.Body>

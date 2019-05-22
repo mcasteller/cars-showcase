@@ -19,6 +19,7 @@
     border-top: $grey 4px solid;
     padding-top: 10px;
     display: inline-block;
+    width: 100%;
 
     @media (min-width: $mobile-breakpoint) {
       display: flex;
