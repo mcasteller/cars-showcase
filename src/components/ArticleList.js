@@ -8,7 +8,11 @@ import strings from '../resources/strings';
 // This component is used on both vehicle list view and vehicle list
 // edit mode
 export const ArticleList = (props) => (
-  <div className="content-container">
+  <div className="content-container article">
+    <div className="article__banner">
+      <img className="hero__image"src="images/article_banner.jpg"/>
+    </div>
+    <h1>{strings.site.articles}</h1>
     <div className="list-body">
       {
         props.articles.length === 0 ? (

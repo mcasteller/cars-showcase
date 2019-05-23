@@ -1,0 +1,19 @@
+.article {
+  .article__banner {
+  	opacity: 0.4;
+    height: 30vh;
+    overflow: hidden;
+  }
+
+  h1 {
+  	padding: 5% 0;
+  }
+
+  .email {
+      font-size: 2rem;
+
+ 	  @media (min-width: $mobile-breakpoint) {
+     	 font-size: 3rem;
+      } 
+  }
+}

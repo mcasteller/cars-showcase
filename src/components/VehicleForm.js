@@ -10,7 +10,8 @@ export default class VehicleForm extends React.Component {
 
     this.state = {
       brand: props.vehicle ? props.vehicle.brand : '', 
-      trim: props.vehicle ? props.vehicle.trim : '', 
+      trim: props.vehicle ? props.vehicle.trim : '',
+      currency: props.vehicle ? props.vehicle.currency : '', 
       amount: props.vehicle ? (props.vehicle.amount).toString() : '',
       year: props.vehicle ? (props.vehicle.year).toString() : '',
       engine: props.vehicle ? props.vehicle.engine : '', 
@@ -32,6 +33,11 @@ export default class VehicleForm extends React.Component {
   onTrimChange = (e) => {
     const trim = e.target.value;
     this.setState(() => ({ trim }));
+  };
+
+  onCurrencyChange = (e) => {
+    const currency = e.target.value;
+    this.setState(() => ({ currency }));
   };
 
   onAmountChange = (e) => {
@@ -79,7 +85,8 @@ export default class VehicleForm extends React.Component {
   };
       
   onFilesChange = (files) => {
-    this.setState(() => files);
+    this.setState(() => files)
+    this.setState(() => ({ resetFiles: true }));
   }
 
   onSubmit = (e) => {
@@ -92,6 +99,7 @@ export default class VehicleForm extends React.Component {
       this.props.onSubmit({
         brand: this.state.brand,
         trim: this.state.trim,
+        currency: this.state.currency || strings.site.currencies.pesos,
         amount: parseFloat(this.state.amount, 10),
         year: parseInt(this.state.year, 10),
         engine: this.state.engine,
@@ -99,7 +107,8 @@ export default class VehicleForm extends React.Component {
         color: this.state.color,
         description: this.state.description,
         shortDescription: this.state.shortDescription,
-        files: this.state.files
+        files: this.state.files,
+        resetFiles: this.state.resetFiles
       });
     }
   };
@@ -135,6 +144,14 @@ export default class VehicleForm extends React.Component {
           value={this.state.year}
           onChange={this.onYearChange}
         />
+        <select
+              className="select"
+              value={this.state.currency}
+              onChange={this.onCurrencyChange}
+            >
+              <option value={strings.site.currencies.pesos}>{strings.site.currencies.pesos}</option>
+              <option value={strings.site.currencies.uss}>{strings.site.currencies.uss}</option>
+        </select>
         <input
           type="text"
           placeholder={strings.site.vehicle.amount}

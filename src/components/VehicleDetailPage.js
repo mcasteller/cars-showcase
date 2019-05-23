@@ -15,6 +15,7 @@ export class VehicleDetailPage extends React.Component {
 	      brand: props.vehicle ? props.vehicle.brand : '', 
 	      trim: props.vehicle ? props.vehicle.trim : '', 
 	      amount: props.vehicle ? (props.vehicle.amount).toString() : '',
+	      currency: props.vehicle ? props.vehicle.currency : '',
 	      year: props.vehicle ? (props.vehicle.year).toString() : '',
 	      engine: props.vehicle ? props.vehicle.engine : '', 
 	      kilometers: props.vehicle ? (props.vehicle.kilometers).toString() : '',
@@ -34,6 +35,7 @@ export class VehicleDetailPage extends React.Component {
 		      	/>
 	          <h3><span>{strings.site.vehicle.brand}: </span>{this.state.brand}</h3>
 	   	      <h3><span>{strings.site.vehicle.trim}: </span>{this.state.trim}</h3>
+		      <h3><span>{strings.site.vehicle.amount}: </span>{this.state.currency} {this.state.amount}</h3>
 		      <h3><span>{strings.site.vehicle.year}: </span>{this.state.year}</h3>
 		   	  <h3><span>{strings.site.vehicle.engine}: </span>{this.state.engine}</h3>
 		      <h3><span>{strings.site.vehicle.kilometers}: </span>{this.state.kilometers}</h3>

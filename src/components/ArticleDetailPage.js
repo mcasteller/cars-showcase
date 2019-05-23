@@ -26,8 +26,8 @@ export class ArticleDetailPage extends React.Component {
 		      <SimpleSlider
 		      	items={this.state.files || [] }
 		      	/>
-	          <h2>{this.state.title}</h2>
-	   	      <h3>{this.state.subTitle}</h3>
+	          <h1>{this.state.title}</h1>
+	   	      <h2>{this.state.subTitle}</h2>
 		      <span className="vehicle-description">{ReactHtmlParser(this.state.description)}</span>
 		    </div>
 		)	

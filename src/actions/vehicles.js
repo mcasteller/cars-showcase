@@ -13,6 +13,7 @@ export const startAddVehicle = (vehicleData = {}) => {
     const {
       brand = '',  
       trim = '',  
+      currency = '',
       amount = 0,  
       year = 0,  
       engine = '',  
@@ -23,7 +24,7 @@ export const startAddVehicle = (vehicleData = {}) => {
       files = []
     } = vehicleData;
 
-    const vehicle = { brand, trim, amount, year, engine, kilometers, color, description, shortDescription, files };
+    const vehicle = { brand, trim, currency, amount, year, engine, kilometers, color, description, shortDescription, files };
     
     /* First we save the vehicle files
     ** Then we store the files using vehicleId from database 
@@ -68,7 +69,9 @@ const removeFiles = async (vehiclePath, getState) => {
 
     //return await Promise.all(files.map(file => storage.ref().child(`${file.path}`).delete()));
     for (const file of vehicles[0].files) {
-      await storage.ref().child(`${file.path}`).delete();
+      await storage.ref().child(`${file.path}`).delete().catch((error) => {
+        console.log(`File not found: ${error}`);
+      });
     }
 }
 
@@ -120,7 +123,8 @@ export const startEditVehicle = (id, updates) => {
         dispatch(editVehicle({
           id,
           ...updates,
-          files: ref.val()
+          files: ref.val(),
+          resetFiles: ''
         }));
     });
   }
@@ -133,7 +137,7 @@ const saveData = async (id, updates, getState) => {
     // ** Note: this requires storing twice some vehice info*/
     const vehiclePath = `vehicles/${id}`;
     await saveVehicle(updates, vehiclePath);
-    const updatedFiles = await saveFiles(vehiclePath, updates.files, true, getState);
+    const updatedFiles = await saveFiles(vehiclePath, updates.files, updates.resetFiles, getState);
     return await updateVehicle(vehiclePath, updatedFiles);
 }
 

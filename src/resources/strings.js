@@ -14,6 +14,11 @@ const strings = {
     articles: 'Articulos',
     contactUs: 'Contacto',
     contactUsDetail: 'Para dudas o consultas por favor escribir al siguiente correo electronico',
+    currencies: {
+      uss: 'U$S',
+      pesos: 'Pesos'
+    },
+    currency: 'Moneda',
     description: 'Compra y venta de autos usados',
     email: 'newtrendautos@gmail.com',
     fileRatioWarning: 'Por favor seleccionar imagenes con proporcion 16:9 o similar',
@@ -34,7 +39,7 @@ const strings = {
     vehicle: {
       addVehicle: 'Agregar Vehiculo',
       addVehicles: 'Agregar Vehiculos',
-      amount: "Valor en Pesos",
+      amount: "Valor",
       brand: 'Marca',
       color: 'Color',
       description: "Agregar Descripcion Vehiculo",

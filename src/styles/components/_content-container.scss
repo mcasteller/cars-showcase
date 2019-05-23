@@ -2,4 +2,14 @@
   margin: 0 auto;
   padding: 20px 5vw;
   text-align: center;
+
+  .article__banner {
+  	opacity: 0.4;
+    height: 30vh;
+    overflow: hidden;
+
+    h1 {
+    	padding: 10% 0;
+    }
+  }
 }
