@@ -40,6 +40,10 @@ const strings = {
       addVehicle: 'Agregar Vehiculo',
       addVehicles: 'Agregar Vehiculos',
       amount: "Valor",
+      amounts: {
+        desc: "Valor Descendente",
+        asc: "Valor Ascendente"
+      },
       brand: 'Marca',
       color: 'Color',
       description: "Agregar Descripcion Vehiculo",
@@ -51,7 +55,11 @@ const strings = {
       saveVehicle: 'Guardar Vehiculo',
       shortDescription: 'Descripcion breve (aparece en el listado de vehiculos)',
       trim: "Modelo",
-      year: "Año"
+      year: "Año",
+      years: {
+        desc: "Año Descendente",
+        asc: "Año Ascendente"
+      },
     },
     vehicles: 'Vehiculos',
     welcome: 'Bienvenido'

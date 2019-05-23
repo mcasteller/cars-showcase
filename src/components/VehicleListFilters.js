@@ -43,8 +43,8 @@ export class VehicleListFilters extends React.Component {
               value={this.props.filters.sortBy}
               onChange={this.onSortChange}
             >
-              <option value="date">{strings.site.vehicle.year}</option>
-              <option value="amount">{strings.site.vehicle.amount}</option>
+              <option value="date">{strings.site.vehicle.years.desc}</option>
+              <option value="amount">{strings.site.vehicle.amounts.desc}</option>
             </select>
           </div>
         </div>

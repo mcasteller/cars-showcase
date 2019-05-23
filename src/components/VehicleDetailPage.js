@@ -27,9 +27,15 @@ export class VehicleDetailPage extends React.Component {
 	    };
 	};
 
+	componentDidMount() {
+	  window.scrollTo(0, 0)
+	}
+	
 	render() {
 		return (
-		    <div className="content-container">
+		    <div className="content-container detail__page">
+  	          <h1>{this.state.brand}</h1>
+   	          <h2>{this.state.trim}</h2>
 		      <SimpleSlider
 		      	items={this.state.files || [] }
 		      	/>

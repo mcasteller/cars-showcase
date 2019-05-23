@@ -1,5 +1,5 @@
 .slick-slider {
-    margin-bottom: 5rem;
+    margin: 5rem 0;
 
 	img {
 		height: 22vh;
@@ -14,9 +14,17 @@
 	    } 
 	}	
 
-	.slick-dots li button:before {
-		font-size : 1rem;
-	}
+	.slick-dots{
+		bottom: -45px;
+
+		li button:before {
+			font-size : 1rem;
+		}
+
+		@media (min-width: $mobile-breakpoint) {
+			bottom: -30px;
+	    }
+	} 
 
 	.slick-next:before, 
 	.slick-prev:before {
