@@ -14,7 +14,8 @@ export const startAddVehicle = (vehicleData = {}) => {
       brand = '',  
       trim = '',  
       currency = '',
-      amount = 0,  
+      amount = 0, 
+      ecommerceLink = '', 
       year = 0,  
       engine = '',  
       kilometers = '',  
@@ -24,7 +25,20 @@ export const startAddVehicle = (vehicleData = {}) => {
       files = []
     } = vehicleData;
 
-    const vehicle = { brand, trim, currency, amount, year, engine, kilometers, color, description, shortDescription, files };
+    const vehicle = { 
+      brand, 
+      trim, 
+      currency, 
+      amount, 
+      year, 
+      engine, 
+      kilometers, 
+      color, 
+      description, 
+      shortDescription, 
+      ecommerceLink,
+      files 
+    };
     
     /* First we save the vehicle files
     ** Then we store the files using vehicleId from database 
@@ -117,27 +131,26 @@ export const editVehicle = (updates) => ({
   ...updates
 });
 
-export const startEditVehicle = (id, updates) => {
+export const startEditVehicle = (id, updates, resetFiles) => {
   return (dispatch, getState) => {
-    return saveData(id, updates, getState).then((ref) => {
+    return saveData(id, updates, getState, resetFiles).then((ref) => {
         dispatch(editVehicle({
           id,
           ...updates,
-          files: ref.val(),
-          resetFiles: ''
+          files: ref.val()
         }));
     });
   }
 }
 
-const saveData = async (id, updates, getState) => {
+const saveData = async (id, updates, getState, resetFiles) => {
   // /* First we save the vehicle files
     // ** Then we store the files using vehicleId from database 
     // ** Finally we store uploaded files url into vehicle data 
     // ** Note: this requires storing twice some vehice info*/
     const vehiclePath = `vehicles/${id}`;
     await saveVehicle(updates, vehiclePath);
-    const updatedFiles = await saveFiles(vehiclePath, updates.files, updates.resetFiles, getState);
+    const updatedFiles = await saveFiles(vehiclePath, updates.files, resetFiles, getState);
     return await updateVehicle(vehiclePath, updatedFiles);
 }
 

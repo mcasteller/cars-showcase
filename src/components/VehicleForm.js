@@ -11,7 +11,8 @@ export default class VehicleForm extends React.Component {
     this.state = {
       brand: props.vehicle ? props.vehicle.brand : '', 
       trim: props.vehicle ? props.vehicle.trim : '',
-      currency: props.vehicle ? props.vehicle.currency : '', 
+      currency: props.vehicle ? props.vehicle.currency : '',
+      ecommerceLink: props.vehicle ? props.vehicle.ecommerceLink : '', 
       amount: props.vehicle ? (props.vehicle.amount).toString() : '',
       year: props.vehicle ? (props.vehicle.year).toString() : '',
       engine: props.vehicle ? props.vehicle.engine : '', 
@@ -20,7 +21,7 @@ export default class VehicleForm extends React.Component {
       description: props.vehicle ? props.vehicle.description : '',
       shortDescription: props.vehicle ? props.vehicle.shortDescription : '',
       calendarFocused: false,
-      files: props.vehicle ? props.vehicle.files : '',
+      files: props.vehicle ? (props.vehicle.files || []) : [],
       error: ''
     };
   }
@@ -78,10 +79,15 @@ export default class VehicleForm extends React.Component {
     const description = value;
     this.setState(() => ({ description }));
   };
-  
+
   onShortDescriptionChange = (value) => {
     const shortDescription = value;
     this.setState(() => ({ shortDescription }));
+  };
+  
+  onEcommerceLinkChange = (e) => {
+    const ecommerceLink = e.target.value;
+    this.setState(() => ({ ecommerceLink }));
   };
       
   onFilesChange = (files) => {
@@ -99,6 +105,7 @@ export default class VehicleForm extends React.Component {
       this.props.onSubmit({
         brand: this.state.brand,
         trim: this.state.trim,
+        ecommerceLink: this.state.ecommerceLink,
         currency: this.state.currency || strings.site.currencies.pesos,
         amount: this.state.amount ? parseFloat(this.state.amount, 10) : '',
         year: this.state.year ? parseInt(this.state.year, 10) : '',
@@ -108,8 +115,7 @@ export default class VehicleForm extends React.Component {
         description: this.state.description,
         shortDescription: this.state.shortDescription,
         files: this.state.files,
-        resetFiles: this.state.resetFiles
-      });
+      }, this.state.resetFiles);
     }
   };
   render() {
@@ -179,6 +185,13 @@ export default class VehicleForm extends React.Component {
           className="text-input"
           value={this.state.color}
           onChange={this.onColorChange}
+        />
+        <input
+          type="text"
+          placeholder={strings.site.vehicle.ecommerceLink}
+          className="text-input"
+          value={this.state.ecommerceLink}
+          onChange={this.onEcommerceLinkChange}
         />
         <ReactQuill 
           placeholder={strings.site.vehicle.description}

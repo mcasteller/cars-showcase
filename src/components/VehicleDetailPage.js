@@ -16,6 +16,7 @@ export class VehicleDetailPage extends React.Component {
 	      trim: props.vehicle ? props.vehicle.trim : '', 
 	      amount: props.vehicle ? (props.vehicle.amount).toString() : '',
 	      currency: props.vehicle ? props.vehicle.currency : '',
+	      ecommerceLink: props.vehicle ? props.vehicle.ecommerceLink : '',
 	      year: props.vehicle ? (props.vehicle.year).toString() : '',
 	      engine: props.vehicle ? props.vehicle.engine : '', 
 	      kilometers: props.vehicle ? (props.vehicle.kilometers).toString() : '',
@@ -47,6 +48,10 @@ export class VehicleDetailPage extends React.Component {
 		      <h3><span>{strings.site.vehicle.kilometers}: </span>{this.state.kilometers}</h3>
 	   	      <h3><span>{strings.site.vehicle.color}: </span>{this.state.color}</h3>
 		      <span className="vehicle-description">{ReactHtmlParser(this.state.description)}</span>
+		  	  <h3>Conocelo en</h3>
+  	  		  <a className="ml-logo" href={this.state.ecommerceLink} target="_blank">
+  	  		  	<img src="/images/ecommerceIcon.png" alt-text={strings.site.ecommerceLabel}/>
+  	  		  </a>
 		    </div>
 		)	
 	}

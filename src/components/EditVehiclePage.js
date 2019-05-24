@@ -5,8 +5,8 @@ import { startEditVehicle, startRemoveVehicle } from '../actions/vehicles';
 import strings from '../resources/strings';
 
 export class EditVehiclePage extends React.Component {
-  onSubmit = (vehicle) => {
-    this.props.startEditVehicle(this.props.vehicle.id, vehicle);
+  onSubmit = (vehicle, resetFiles) => {
+    this.props.startEditVehicle(this.props.vehicle.id, vehicle, resetFiles);
     this.props.history.push('/admin');
   };
   onRemove = () => {
