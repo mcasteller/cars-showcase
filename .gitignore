@@ -1,4 +1,8 @@
+# folders
 node_modules/
 public/dist/
+
+# internal property files
 .env.test
 .env.development
+.vscode/launch.json

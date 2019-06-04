@@ -22,7 +22,7 @@ export const startAddVehicle = (vehicleData = {}) => {
       color = '',  
       description = '',
       shortDescription = '',
-      files = []
+      files = ''
     } = vehicleData;
 
     const vehicle = { 
@@ -47,13 +47,17 @@ export const startAddVehicle = (vehicleData = {}) => {
     const vehicleRef = await saveVehicle(vehicle);
     const vehiclePath = vehicleRef.path.toString();
     const updatedFiles = await saveFiles(vehiclePath, files);
-    return await updateVehicle(vehiclePath, updatedFiles).then(() => {
+    return await updateVehicle(vehiclePath, updatedFiles)
+      .then(() => {
         dispatch(addVehicle({
           id: vehicleRef.key,
           ...vehicle,
           files: updatedFiles
         }));
-    });
+      })
+      .catch((e) => {
+        console.log('Error', e);
+      });
   };
 };
 
@@ -68,7 +72,9 @@ const saveFiles = async (vehiclePath, files, removeExistingFiles, getState) => {
   if (removeExistingFiles) {
     await removeFiles(vehiclePath, getState);
   }
-  return await Promise.all(files.map(file => saveFile(vehiclePath, file)))
+  return files.length > 0 ?
+         await Promise.all(files.map(file => saveFile(vehiclePath, file))) :
+         '' ;
 }
 
 const updateVehicle = async (vehiclePath, updatedFiles) => {

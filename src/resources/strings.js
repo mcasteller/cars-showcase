@@ -64,6 +64,7 @@ const strings = {
       },
     },
     vehicles: 'Vehiculos',
+    visit: 'Encuentralo en',
     welcome: 'Bienvenido'
   }
 }

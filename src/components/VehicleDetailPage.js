@@ -52,7 +52,7 @@ export class VehicleDetailPage extends React.Component {
 		  	  	{this.state.ecommerceLink.length > 0
 		  	  	 ?  (
 		  	  	 	<div>
-			  	  	 	<h3>Conocelo en</h3>
+			  	  	 	<h3>{strings.site.visit}</h3>
 		  	  		  	<a className="ml-logo" href={this.state.ecommerceLink} target="_blank">
 		  	  		  		<img src="/images/ecommerceIcon.png" alt-text={strings.site.ecommerceLabel}/>
 		  	  		  	</a>
