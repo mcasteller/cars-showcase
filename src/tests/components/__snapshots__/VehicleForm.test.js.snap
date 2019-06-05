@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render VehicleForm correctly 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <h3>
+    Por favor seleccionar imagenes con proporcion 16:9 o similar
+  </h3>
+  <FileSelect
+    files={Array []}
+    onChange={[Function]}
+  />
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Marca"
+    type="textarea"
+    value=""
+  />
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Modelo"
+    type="textarea"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Año"
+    type="text"
+    value=""
+  />
+  <select
+    className="select"
+    onChange={[Function]}
+    value=""
+  >
+    <option
+      value="Pesos"
+    >
+      Pesos
+    </option>
+    <option
+      value="U$S"
+    >
+      U$S
+    </option>
+  </select>
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Valor"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Motor"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Kilometros"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Color"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Link MercadoLibre"
+    type="text"
+    value=""
+  />
+  <Quill
+    modules={Object {}}
+    onChange={[Function]}
+    placeholder="Agregar Descripcion Vehiculo"
+    theme="snow"
+    value=""
+  />
+  <Quill
+    modules={Object {}}
+    onChange={[Function]}
+    placeholder="Descripcion breve (aparece en el listado de vehiculos)"
+    theme="snow"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Guardar Vehiculo
+    </button>
+  </div>
+</form>
+`;
+
+exports[`should render VehicleForm correctly with vehicle data 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <h3>
+    Por favor seleccionar imagenes con proporcion 16:9 o similar
+  </h3>
+  <FileSelect
+    files={Array []}
+    onChange={[Function]}
+  />
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Marca"
+    type="textarea"
+    value="Peugeot"
+  />
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Modelo"
+    type="textarea"
+    value="405"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Año"
+    type="text"
+    value="2012"
+  />
+  <select
+    className="select"
+    onChange={[Function]}
+    value="pesos"
+  >
+    <option
+      value="Pesos"
+    >
+      Pesos
+    </option>
+    <option
+      value="U$S"
+    >
+      U$S
+    </option>
+  </select>
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Valor"
+    type="text"
+    value="650000"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Motor"
+    type="text"
+    value="2.0"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Kilometros"
+    type="text"
+    value="80000"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Color"
+    type="text"
+    value="blue"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Link MercadoLibre"
+    type="text"
+    value=""
+  />
+  <Quill
+    modules={Object {}}
+    onChange={[Function]}
+    placeholder="Agregar Descripcion Vehiculo"
+    theme="snow"
+    value="Peugeout 405 description"
+  />
+  <Quill
+    modules={Object {}}
+    onChange={[Function]}
+    placeholder="Descripcion breve (aparece en el listado de vehiculos)"
+    theme="snow"
+    value="Peugeout 405 short description"
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Guardar Vehiculo
+    </button>
+  </div>
+</form>
+`;

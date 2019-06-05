@@ -4,7 +4,7 @@ import VehicleForm from './VehicleForm';
 import { startAddVehicle } from '../actions/vehicles';
 import strings from '../resources/strings';
 
-class AddVehiclePage extends React.Component {
+export class AddVehiclePage extends React.Component {
   onSubmit = (vehicle) => {
     this.props.startAddVehicle(vehicle);
     this.props.history.push('/admin');

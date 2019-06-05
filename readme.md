@@ -30,6 +30,15 @@ To run this project into a local server run
 ```
 yarn run dev-server
 ```
+Execute Test Cases
+```
+yarn run test
+```
+Debug Test Cases
+```
+yarn run test-debug
+```
+
 
 ## Some interesting topics you may find:
 
