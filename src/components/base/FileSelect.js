@@ -1,5 +1,5 @@
 import React from 'react';
-import strings from '../resources/strings';
+import strings from '../../resources/strings';
 
 class FileSelect extends React.Component {
     constructor(props) {

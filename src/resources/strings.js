@@ -30,6 +30,9 @@ const strings = {
     logout: 'Logout',
     loginGoogle: 'Login with Google',
     manage: 'Administrar',
+    meli: {
+      sync: 'Importar vehiculos desde Mercadolibre'
+    },
     name: 'New Trend Autos',
     noArticles: 'No hay articulos disponibles!',
     noFilesSelected: 'No hay archivos seleccionados!',

@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import ReactQuill from 'react-quill';
-import FileSelect from './FileSelect';
+import FileSelect from './base/FileSelect';
 import strings from '../resources/strings';
 
 export default class VehicleForm extends React.Component {

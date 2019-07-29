@@ -4,7 +4,7 @@ import moment from 'moment';
 import numeral from 'numeral';
 import { connect } from 'react-redux';
 import ReactHtmlParser from 'react-html-parser';
-import SimpleSlider from './SimpleSlider'; 
+import SimpleSlider from './base/SimpleSlider'; 
 import strings from '../resources/strings';
 
 export class VehicleDetailPage extends React.Component {
