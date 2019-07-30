@@ -1,6 +1,8 @@
 # Cars Showcase web app
 
-CRUD web application. 
+This project is still under development:
+- 1st Iteration: enable CRUD features using the tools detailed below.
+- 2nd Iteration (in progress): integrate with [MELI](https://github.com/mercadolibre/MercadoLibreNode) third party services to retrieve vehicle data.
 
 Technologies
 
