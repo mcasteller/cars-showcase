@@ -10,6 +10,7 @@ app.use(cors())
 app.use(express.static(publicPath));
 
 require('./startup/routes')(app);
+require('./events/subscription')();
 
 // app.all('/secret', function (req, res, next) {
 //   console.log('Accessing the secret section ...')
@@ -20,6 +21,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log('Server is up and running!');
 });
+
+module.exports = server;

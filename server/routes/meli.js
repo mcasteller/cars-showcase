@@ -1,11 +1,12 @@
 const express = require('express');
+const path = require('path');
 const router = express.Router();
-// const meliEmitter = require('../events/meliEmitter');
+const meliEmitter = require('../events/meliEmitter');
 const meli = require('mercadolibre');
 
 // Initialize
 const meliObject = new meli.Meli(process.env.App_Id, process.env.Secret_Key),
-      redirect_uri = "https://ce341e9b.ngrok.io/api/meli/getUserAuth";
+      redirect_uri = process.env.REDIRECT_URI;  //"https://ce341e9b.ngrok.io/api/meli/getUserAuth";
 
 // Deliver auth URL to front end user (could be any user that wish to work with the app)
 router.get('/getAuthURL', (req, res) => {
@@ -23,14 +24,14 @@ router.get('/getUserAuth', (req, res) => {
             if (err) {
                 console.log('err', err);
             } else {
-                // fire event
-                // meliEmitter.emit('user-auth-available', res)
+                // fire event holding user token information
+                meliEmitter.emit('user-auth-available', res)
             }
         }
         meliObject.authorize(code, redirect_uri, callback); 
     }
 
-    res.status(301).send('Redirect to ML Auth');
+    res.sendFile(path.join(publicPath, 'index.html'));
 });
 
 module.exports = router; 

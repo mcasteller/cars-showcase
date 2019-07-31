@@ -34,13 +34,7 @@ import Toggle from './base/Toggle';
 
   handleUserAuthorization = async (isChecked) => {
     if (isChecked) {
-      await axios.get(this.state.authURL, { crossDomain: true })
-        .then(function (response) {
-          console.log(response);
-         })
-        .catch(function (error) {
-          console.log(error);
-        })
+      window.location = this.state.authURL;
     }
   }
 
