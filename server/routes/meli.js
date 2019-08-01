@@ -31,7 +31,7 @@ router.get('/getUserAuth', (req, res) => {
         meliObject.authorize(code, redirect_uri, callback); 
     }
 
-    res.sendFile(path.join(publicPath, 'index.html'));
+    res.sendFile(path.join(__dirname, '../../public', 'index.html'));
 });
 
 module.exports = router; 

@@ -1,6 +1,5 @@
 const user = require('../../models/user');
 // const request = require('supertest');
-const bcrypt = require('bcryptjs');
 
 describe('user token auth', () => {
   let server; 
@@ -32,16 +31,20 @@ describe('user token auth', () => {
     }; 
 
     await user.saveMeliTokens(user, data);
+
     const tokenData = await user.getMeliTokens(user);
 
-    bcrypt.compare(data.access_token, tokenData.access_token, function(err, res) {
-      expect(res).toBeTruthy();
-    });
+    expect(data.access_token).toEqual(tokenData.access_token);
 
-    bcrypt.compare(data.refresh_token, tokenData.refresh_token, function(err, res) {
-      expect(res).toBeTruthy();
-    });
+    expect(data.refresh_token).toEqual(tokenData.refresh_token);
 
+  });
+
+  it('should retrieve user data', async () => {
+
+    const userData = await user.getUserData(user);
+
+    expect(userData).not.toBeUndefined();
   });
 
 });

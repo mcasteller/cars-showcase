@@ -1,1584 +1,221 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render VehicleForm correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <VehicleForm />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        "",
-        <h3>
-          Por favor seleccionar imagenes con proporcion 16:9 o similar
-</h3>,
-        <FileSelect
-          files={Array []}
-          onChange={[Function]}
-/>,
-        <input
-          autoFocus={true}
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Marca"
-          type="textarea"
-          value=""
-/>,
-        <input
-          autoFocus={true}
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Modelo"
-          type="textarea"
-          value=""
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Año"
-          type="text"
-          value=""
-/>,
-        <select
-          className="select"
-          onChange={[Function]}
-          value=""
+<form
+  className="form"
+  onSubmit={[Function]}
 >
-          <option
-                    value="Pesos"
-          >
-                    Pesos
-          </option>
-          <option
-                    value="U$S"
-          >
-                    U$S
-          </option>
-</select>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Valor"
-          type="text"
-          value=""
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Motor"
-          type="text"
-          value=""
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Kilometros"
-          type="text"
-          value=""
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Color"
-          type="text"
-          value=""
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Link MercadoLibre"
-          type="text"
-          value=""
-/>,
-        <Quill
-          modules={Object {}}
-          onChange={[Function]}
-          placeholder="Agregar Descripcion Vehiculo"
-          theme="snow"
-          value=""
-/>,
-        <Quill
-          modules={Object {}}
-          onChange={[Function]}
-          placeholder="Descripcion breve (aparece en el listado de vehiculos)"
-          theme="snow"
-          value=""
-/>,
-        <div>
-          <button
-                    className="button"
-          >
-                    Guardar Vehiculo
-          </button>
-</div>,
-      ],
-      "className": "form",
-      "onSubmit": [Function],
-    },
-    "ref": null,
-    "rendered": Array [
-      "",
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Por favor seleccionar imagenes con proporcion 16:9 o similar",
-        },
-        "ref": null,
-        "rendered": "Por favor seleccionar imagenes con proporcion 16:9 o similar",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "files": Array [],
-          "onChange": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "autoFocus": true,
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Marca",
-          "type": "textarea",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "autoFocus": true,
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Modelo",
-          "type": "textarea",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Año",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <option
-              value="Pesos"
->
-              Pesos
-</option>,
-            <option
-              value="U$S"
->
-              U$S
-</option>,
-          ],
-          "className": "select",
-          "onChange": [Function],
-          "value": "",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Pesos",
-              "value": "Pesos",
-            },
-            "ref": null,
-            "rendered": "Pesos",
-            "type": "option",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "U$S",
-              "value": "U$S",
-            },
-            "ref": null,
-            "rendered": "U$S",
-            "type": "option",
-          },
-        ],
-        "type": "select",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Valor",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Motor",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Kilometros",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Color",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Link MercadoLibre",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "modules": Object {},
-          "onChange": [Function],
-          "placeholder": "Agregar Descripcion Vehiculo",
-          "theme": "snow",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "modules": Object {},
-          "onChange": [Function],
-          "placeholder": "Descripcion breve (aparece en el listado de vehiculos)",
-          "theme": "snow",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <button
-            className="button"
->
-            Guardar Vehiculo
-</button>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Guardar Vehiculo",
-            "className": "button",
-          },
-          "ref": null,
-          "rendered": "Guardar Vehiculo",
-          "type": "button",
-        },
-        "type": "div",
-      },
-    ],
-    "type": "form",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          "",
-          <h3>
-            Por favor seleccionar imagenes con proporcion 16:9 o similar
-</h3>,
-          <FileSelect
-            files={Array []}
-            onChange={[Function]}
-/>,
-          <input
-            autoFocus={true}
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Marca"
-            type="textarea"
-            value=""
-/>,
-          <input
-            autoFocus={true}
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Modelo"
-            type="textarea"
-            value=""
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Año"
-            type="text"
-            value=""
-/>,
-          <select
-            className="select"
-            onChange={[Function]}
-            value=""
->
-            <option
-                        value="Pesos"
-            >
-                        Pesos
-            </option>
-            <option
-                        value="U$S"
-            >
-                        U$S
-            </option>
-</select>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Valor"
-            type="text"
-            value=""
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Motor"
-            type="text"
-            value=""
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Kilometros"
-            type="text"
-            value=""
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Color"
-            type="text"
-            value=""
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Link MercadoLibre"
-            type="text"
-            value=""
-/>,
-          <Quill
-            modules={Object {}}
-            onChange={[Function]}
-            placeholder="Agregar Descripcion Vehiculo"
-            theme="snow"
-            value=""
-/>,
-          <Quill
-            modules={Object {}}
-            onChange={[Function]}
-            placeholder="Descripcion breve (aparece en el listado de vehiculos)"
-            theme="snow"
-            value=""
-/>,
-          <div>
-            <button
-                        className="button"
-            >
-                        Guardar Vehiculo
-            </button>
-</div>,
-        ],
-        "className": "form",
-        "onSubmit": [Function],
-      },
-      "ref": null,
-      "rendered": Array [
-        "",
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Por favor seleccionar imagenes con proporcion 16:9 o similar",
-          },
-          "ref": null,
-          "rendered": "Por favor seleccionar imagenes con proporcion 16:9 o similar",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "files": Array [],
-            "onChange": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "autoFocus": true,
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Marca",
-            "type": "textarea",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "autoFocus": true,
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Modelo",
-            "type": "textarea",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Año",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <option
-                value="Pesos"
->
-                Pesos
-</option>,
-              <option
-                value="U$S"
->
-                U$S
-</option>,
-            ],
-            "className": "select",
-            "onChange": [Function],
-            "value": "",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Pesos",
-                "value": "Pesos",
-              },
-              "ref": null,
-              "rendered": "Pesos",
-              "type": "option",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "U$S",
-                "value": "U$S",
-              },
-              "ref": null,
-              "rendered": "U$S",
-              "type": "option",
-            },
-          ],
-          "type": "select",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Valor",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Motor",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Kilometros",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Color",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Link MercadoLibre",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "modules": Object {},
-            "onChange": [Function],
-            "placeholder": "Agregar Descripcion Vehiculo",
-            "theme": "snow",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "modules": Object {},
-            "onChange": [Function],
-            "placeholder": "Descripcion breve (aparece en el listado de vehiculos)",
-            "theme": "snow",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <button
-              className="button"
->
-              Guardar Vehiculo
-</button>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Guardar Vehiculo",
-              "className": "button",
-            },
-            "ref": null,
-            "rendered": "Guardar Vehiculo",
-            "type": "button",
-          },
-          "type": "div",
-        },
-      ],
-      "type": "form",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-  Symbol(enzyme.__childContext__): null,
-}
+  <h3>
+    Por favor seleccionar imagenes con proporcion 16:9 o similar
+  </h3>
+  <FileSelect
+    files={Array []}
+    onChange={[Function]}
+  />
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Marca"
+    type="textarea"
+    value=""
+  />
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Modelo"
+    type="textarea"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Año"
+    type="text"
+    value=""
+  />
+  <select
+    className="select"
+    onChange={[Function]}
+    value=""
+  >
+    <option
+      value="Pesos"
+    >
+      Pesos
+    </option>
+    <option
+      value="U$S"
+    >
+      U$S
+    </option>
+  </select>
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Valor"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Motor"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Kilometros"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Color"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Link MercadoLibre"
+    type="text"
+    value=""
+  />
+  <Quill
+    modules={Object {}}
+    onChange={[Function]}
+    placeholder="Agregar Descripcion Vehiculo"
+    theme="snow"
+    value=""
+  />
+  <Quill
+    modules={Object {}}
+    onChange={[Function]}
+    placeholder="Descripcion breve (aparece en el listado de vehiculos)"
+    theme="snow"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Guardar Vehiculo
+    </button>
+  </div>
+</form>
 `;
 
 exports[`should render VehicleForm correctly with vehicle data 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <VehicleForm
-    vehicle={
-        Object {
-            "amount": 650000,
-            "brand": "Peugeot",
-            "color": "blue",
-            "currency": "pesos",
-            "description": "Peugeout 405 description",
-            "ecommerceLink": "",
-            "engine": "2.0",
-            "files": "",
-            "kilometers": 80000,
-            "shortDescription": "Peugeout 405 short description",
-            "trim": "405",
-            "year": 2012,
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        "",
-        <h3>
-          Por favor seleccionar imagenes con proporcion 16:9 o similar
-</h3>,
-        <FileSelect
-          files={Array []}
-          onChange={[Function]}
-/>,
-        <input
-          autoFocus={true}
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Marca"
-          type="textarea"
-          value="Peugeot"
-/>,
-        <input
-          autoFocus={true}
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Modelo"
-          type="textarea"
-          value="405"
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Año"
-          type="text"
-          value="2012"
-/>,
-        <select
-          className="select"
-          onChange={[Function]}
-          value="pesos"
+<form
+  className="form"
+  onSubmit={[Function]}
 >
-          <option
-                    value="Pesos"
-          >
-                    Pesos
-          </option>
-          <option
-                    value="U$S"
-          >
-                    U$S
-          </option>
-</select>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Valor"
-          type="text"
-          value="650000"
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Motor"
-          type="text"
-          value="2.0"
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Kilometros"
-          type="text"
-          value="80000"
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Color"
-          type="text"
-          value="blue"
-/>,
-        <input
-          className="text-input"
-          onChange={[Function]}
-          placeholder="Link MercadoLibre"
-          type="text"
-          value=""
-/>,
-        <Quill
-          modules={Object {}}
-          onChange={[Function]}
-          placeholder="Agregar Descripcion Vehiculo"
-          theme="snow"
-          value="Peugeout 405 description"
-/>,
-        <Quill
-          modules={Object {}}
-          onChange={[Function]}
-          placeholder="Descripcion breve (aparece en el listado de vehiculos)"
-          theme="snow"
-          value="Peugeout 405 short description"
-/>,
-        <div>
-          <button
-                    className="button"
-          >
-                    Guardar Vehiculo
-          </button>
-</div>,
-      ],
-      "className": "form",
-      "onSubmit": [Function],
-    },
-    "ref": null,
-    "rendered": Array [
-      "",
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Por favor seleccionar imagenes con proporcion 16:9 o similar",
-        },
-        "ref": null,
-        "rendered": "Por favor seleccionar imagenes con proporcion 16:9 o similar",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "files": Array [],
-          "onChange": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "autoFocus": true,
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Marca",
-          "type": "textarea",
-          "value": "Peugeot",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "autoFocus": true,
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Modelo",
-          "type": "textarea",
-          "value": "405",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Año",
-          "type": "text",
-          "value": "2012",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <option
-              value="Pesos"
->
-              Pesos
-</option>,
-            <option
-              value="U$S"
->
-              U$S
-</option>,
-          ],
-          "className": "select",
-          "onChange": [Function],
-          "value": "pesos",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Pesos",
-              "value": "Pesos",
-            },
-            "ref": null,
-            "rendered": "Pesos",
-            "type": "option",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "U$S",
-              "value": "U$S",
-            },
-            "ref": null,
-            "rendered": "U$S",
-            "type": "option",
-          },
-        ],
-        "type": "select",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Valor",
-          "type": "text",
-          "value": "650000",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Motor",
-          "type": "text",
-          "value": "2.0",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Kilometros",
-          "type": "text",
-          "value": "80000",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Color",
-          "type": "text",
-          "value": "blue",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "text-input",
-          "onChange": [Function],
-          "placeholder": "Link MercadoLibre",
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "modules": Object {},
-          "onChange": [Function],
-          "placeholder": "Agregar Descripcion Vehiculo",
-          "theme": "snow",
-          "value": "Peugeout 405 description",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "modules": Object {},
-          "onChange": [Function],
-          "placeholder": "Descripcion breve (aparece en el listado de vehiculos)",
-          "theme": "snow",
-          "value": "Peugeout 405 short description",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <button
-            className="button"
->
-            Guardar Vehiculo
-</button>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Guardar Vehiculo",
-            "className": "button",
-          },
-          "ref": null,
-          "rendered": "Guardar Vehiculo",
-          "type": "button",
-        },
-        "type": "div",
-      },
-    ],
-    "type": "form",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          "",
-          <h3>
-            Por favor seleccionar imagenes con proporcion 16:9 o similar
-</h3>,
-          <FileSelect
-            files={Array []}
-            onChange={[Function]}
-/>,
-          <input
-            autoFocus={true}
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Marca"
-            type="textarea"
-            value="Peugeot"
-/>,
-          <input
-            autoFocus={true}
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Modelo"
-            type="textarea"
-            value="405"
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Año"
-            type="text"
-            value="2012"
-/>,
-          <select
-            className="select"
-            onChange={[Function]}
-            value="pesos"
->
-            <option
-                        value="Pesos"
-            >
-                        Pesos
-            </option>
-            <option
-                        value="U$S"
-            >
-                        U$S
-            </option>
-</select>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Valor"
-            type="text"
-            value="650000"
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Motor"
-            type="text"
-            value="2.0"
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Kilometros"
-            type="text"
-            value="80000"
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Color"
-            type="text"
-            value="blue"
-/>,
-          <input
-            className="text-input"
-            onChange={[Function]}
-            placeholder="Link MercadoLibre"
-            type="text"
-            value=""
-/>,
-          <Quill
-            modules={Object {}}
-            onChange={[Function]}
-            placeholder="Agregar Descripcion Vehiculo"
-            theme="snow"
-            value="Peugeout 405 description"
-/>,
-          <Quill
-            modules={Object {}}
-            onChange={[Function]}
-            placeholder="Descripcion breve (aparece en el listado de vehiculos)"
-            theme="snow"
-            value="Peugeout 405 short description"
-/>,
-          <div>
-            <button
-                        className="button"
-            >
-                        Guardar Vehiculo
-            </button>
-</div>,
-        ],
-        "className": "form",
-        "onSubmit": [Function],
-      },
-      "ref": null,
-      "rendered": Array [
-        "",
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Por favor seleccionar imagenes con proporcion 16:9 o similar",
-          },
-          "ref": null,
-          "rendered": "Por favor seleccionar imagenes con proporcion 16:9 o similar",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "files": Array [],
-            "onChange": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "autoFocus": true,
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Marca",
-            "type": "textarea",
-            "value": "Peugeot",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "autoFocus": true,
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Modelo",
-            "type": "textarea",
-            "value": "405",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Año",
-            "type": "text",
-            "value": "2012",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <option
-                value="Pesos"
->
-                Pesos
-</option>,
-              <option
-                value="U$S"
->
-                U$S
-</option>,
-            ],
-            "className": "select",
-            "onChange": [Function],
-            "value": "pesos",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Pesos",
-                "value": "Pesos",
-              },
-              "ref": null,
-              "rendered": "Pesos",
-              "type": "option",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "U$S",
-                "value": "U$S",
-              },
-              "ref": null,
-              "rendered": "U$S",
-              "type": "option",
-            },
-          ],
-          "type": "select",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Valor",
-            "type": "text",
-            "value": "650000",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Motor",
-            "type": "text",
-            "value": "2.0",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Kilometros",
-            "type": "text",
-            "value": "80000",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Color",
-            "type": "text",
-            "value": "blue",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "text-input",
-            "onChange": [Function],
-            "placeholder": "Link MercadoLibre",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "modules": Object {},
-            "onChange": [Function],
-            "placeholder": "Agregar Descripcion Vehiculo",
-            "theme": "snow",
-            "value": "Peugeout 405 description",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "modules": Object {},
-            "onChange": [Function],
-            "placeholder": "Descripcion breve (aparece en el listado de vehiculos)",
-            "theme": "snow",
-            "value": "Peugeout 405 short description",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <button
-              className="button"
->
-              Guardar Vehiculo
-</button>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Guardar Vehiculo",
-              "className": "button",
-            },
-            "ref": null,
-            "rendered": "Guardar Vehiculo",
-            "type": "button",
-          },
-          "type": "div",
-        },
-      ],
-      "type": "form",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-  Symbol(enzyme.__childContext__): null,
-}
+  <h3>
+    Por favor seleccionar imagenes con proporcion 16:9 o similar
+  </h3>
+  <FileSelect
+    files={Array []}
+    onChange={[Function]}
+  />
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Marca"
+    type="textarea"
+    value="Peugeot"
+  />
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Modelo"
+    type="textarea"
+    value="405"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Año"
+    type="text"
+    value="2012"
+  />
+  <select
+    className="select"
+    onChange={[Function]}
+    value="pesos"
+  >
+    <option
+      value="Pesos"
+    >
+      Pesos
+    </option>
+    <option
+      value="U$S"
+    >
+      U$S
+    </option>
+  </select>
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Valor"
+    type="text"
+    value="650000"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Motor"
+    type="text"
+    value="2.0"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Kilometros"
+    type="text"
+    value="80000"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Color"
+    type="text"
+    value="blue"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Link MercadoLibre"
+    type="text"
+    value=""
+  />
+  <Quill
+    modules={Object {}}
+    onChange={[Function]}
+    placeholder="Agregar Descripcion Vehiculo"
+    theme="snow"
+    value="Peugeout 405 description"
+  />
+  <Quill
+    modules={Object {}}
+    onChange={[Function]}
+    placeholder="Descripcion breve (aparece en el listado de vehiculos)"
+    theme="snow"
+    value="Peugeout 405 short description"
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Guardar Vehiculo
+    </button>
+  </div>
+</form>
 `;

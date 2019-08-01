@@ -34,7 +34,8 @@ import Toggle from './base/Toggle';
 
   handleUserAuthorization = async (isChecked) => {
     if (isChecked) {
-      window.location = this.state.authURL;
+     window.location = this.state.authURL;
+     // window.open(this.state.authURL, "Google", "width=500,height=500");
     }
   }
 
