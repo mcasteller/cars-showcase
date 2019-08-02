@@ -5,14 +5,32 @@ class Toggle extends React.Component {
     super(props);
     this.state = {
       isChecked: props.isChecked || false,
-    };
+      };
     
     this.handleChange = this.handleChange.bind(this);
+
   }
+
   handleChange() {
-    this.setState({ isChecked: !this.state.isChecked })
-    this.props.onChange(this.state.isChecked);
+    this.setState({ isChecked: !this.state.isChecked }, () => {
+      this.props.onChange(this.state.isChecked);
+      // Update checked 
+      const checkbox = document.querySelector('[type="checkbox"]');
+      if (checkbox) 
+        checkbox.checked = this.state.isChecked;
+
+    })
   }
+
+  componentDidMount() {
+    // Update checked 
+    const checkbox = document.querySelector('[type="checkbox"]');
+    if (checkbox) 
+      checkbox.checked = this.state.isChecked;
+      
+    return this.state.isChecked; 
+  }
+
   render () {
     return (
       <label className="switch">

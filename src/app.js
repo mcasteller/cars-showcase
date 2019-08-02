@@ -11,6 +11,7 @@ import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 import { startSetVehicles } from './actions/vehicles';
 import { startSetArticles } from './actions/articles';
+import { startSetUsers } from './actions/users';
 
 // Create Redux store
 const store = configureStore();
@@ -34,7 +35,8 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 Promise.all([
   store.dispatch(startSetVehicles()),
-  store.dispatch(startSetArticles())
+  store.dispatch(startSetArticles()),
+  store.dispatch(startSetUsers())
 ]).then(() => {
   renderApp();
 

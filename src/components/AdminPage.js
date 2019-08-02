@@ -1,16 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import strings from '../resources/strings';
 import axios from 'axios';
+import { connect } from 'react-redux';
 import Toggle from './base/Toggle';
+import strings from '../resources/strings';
+import { startMeliSynchronize, removeMeliSynchronize } from '../actions/users';
+import { auth } from 'firebase/app';
 
  class AdminPage extends React.Component {
   
   constructor(props) {
     super(props);
+    
 
     this.state = {
-      authURL : ''
+      authURL : '',
+      enableMeliSync : props.user ? props.user.meli.enableMeliSync : false
     }
   }
   
@@ -34,8 +39,11 @@ import Toggle from './base/Toggle';
 
   handleUserAuthorization = async (isChecked) => {
     if (isChecked) {
-     window.location = this.state.authURL;
+      this.props.startMeliSynchronize(this.state.authURL);
+     //window.location = this.state.authURL;
      // window.open(this.state.authURL, "Google", "width=500,height=500");
+    } else {
+      this.props.removeMeliSynchronize();
     }
   }
 
@@ -54,7 +62,7 @@ import Toggle from './base/Toggle';
         <h2>{strings.site.meli.sync}</h2>
         <Link to={this.state.authURL}>
         </Link>
-        <Toggle isChecked onChange={this.handleUserAuthorization}/>
+        <Toggle isChecked={this.state.enableMeliSync} onChange={this.handleUserAuthorization}/>
         <h2>{strings.site.articles}</h2>
         <Link to="/admin/articulos/create">
           <h2>{strings.site.article.addArticle}</h2>
@@ -67,4 +75,16 @@ import Toggle from './base/Toggle';
   }
 } 
 
-export default AdminPage;
+// Make dispatch functions to be available on props 
+const mapDispatchToProps = (dispatch) => ({
+  startMeliSynchronize: (authURL) => dispatch(startMeliSynchronize(authURL)),
+  removeMeliSynchronize: () => dispatch(removeMeliSynchronize())
+});
+
+const mapStateToProps = (state, props) => ({
+  user: state.users ? state.users[0] : ''
+});
+
+// Call higher order component with our component as function call parameter
+// Also pass two params to connect component
+export default connect(mapStateToProps, mapDispatchToProps)(AdminPage);
